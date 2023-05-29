@@ -1,11 +1,7 @@
 "use client";
 
-import AnimatedLetter from "@/components/AnimatedLetter";
-import AnimatedShape from "@/components/AnimatedShape";
 import AnimatedTitle from "@/components/animatedTitle";
-import Image from "next/image";
-import { useEffect, useRef, useState } from "react";
-import Header from "../components/Header";
+import { Parallax } from "react-scroll-parallax";
 
 export default function Home() {
   // const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -54,7 +50,6 @@ export default function Home() {
                       {" "}
                       full-stack development{" "}
                     </span>
-
                     <br />
                     <span className=" text-accent3">
                       <span className=" text-accent3">for the</span>
@@ -74,7 +69,7 @@ export default function Home() {
           footer
         </section>
       </div>
-      <div className="w-full h-screen top-0 fixed left-0 pointer-events-none">
+      <div className="absolute w-full h-full top-0 left-0 pointer-events-none">
         <div
           className="site-grid "
           //ref={dotGridRef}
@@ -82,19 +77,25 @@ export default function Home() {
           //   transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
           // }}
         />
-        <div className="absolute w-full h-full">
-          <div className="squares fill-accent3 opacity-[0.1] absolute top-[19vh] left-[31vw] w-[70px]">
+        <div className="w-full h-full">
+          <Parallax
+            className=" squares fill-accent3 opacity-[0.1] absolute w-[70px] transition-all top-[26vh] left-[31vw]"
+            speed={15}
+          >
             <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
               <path d="m21,21v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125z" />
             </svg>
-          </div>
-          <svg
-            className="squares fill-accent2 opacity-[0.1] triangle absolute top-[81vh] left-[62vw] w-[80px]"
-            viewBox="0 0 512 512"
-            xmlns="http://www.w3.org/2000/svg"
+          </Parallax>
+          <Parallax
+            className="squares fill-accent2 opacity-[0.1] triangle absolute top-[74vh] left-[61.5vw] w-[80px]"
+            speed={15}
           >
-            <path d="m21,21v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125z" />
-          </svg>
+            {" "}
+            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+              <path d="m21,21v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125z" />
+            </svg>
+          </Parallax>
+
           <svg
             className="triangle shape-animated stroke-accent opacity-[0.6] absolute top-[17vh] left-[32vw] w-[70px]"
             xmlns="http://www.w3.org/2000/svg"
