@@ -13,6 +13,7 @@ type Props = {
   children?: React.ReactNode;
   onLoadAnimation?: EAnimationType;
   disableOnHover?: boolean;
+  key?: number;
 };
 
 type State = {
@@ -44,10 +45,11 @@ export default class AnimatedLetter extends Component<Props, State> {
   }
 
   render() {
-    const { disableOnHover, children } = this.props;
+    const { disableOnHover, children, key } = this.props;
     const { hover, onLoadAnimationName } = this.state;
     return (
       <span
+        key={key}
         className={classNames(
           "rubberband-hover inline-block",
           onLoadAnimationName,

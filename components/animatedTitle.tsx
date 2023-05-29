@@ -40,13 +40,19 @@ class AnimatedTitle extends React.Component<Props, State> {
                 letter === " " ? (
                   " "
                 ) : (
-                  <AnimatedLetter>{subletter}</AnimatedLetter>
+                  <AnimatedLetter key={i + ii / 100}>
+                    {subletter}
+                  </AnimatedLetter>
                 )
               );
             }
           } else {
             spans.push(
-              letter === " " ? " " : <AnimatedLetter>{letter}</AnimatedLetter>
+              letter === " " ? (
+                " "
+              ) : (
+                <AnimatedLetter key={i}>{letter}</AnimatedLetter>
+              )
             );
           }
         }
