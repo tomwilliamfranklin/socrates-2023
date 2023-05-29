@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #061425;
+  --accent: #f4d35e;
+  --secondary: #303a44;
+  --secondaryAccent: #577399;
+  --secondaryLight: #516170;
+  --light: #bdd5ea;
+
+  --primaryDark: #191919;
+  --highlight: #e80000;
+  --whiteColor: #f7f7ff;
+  --blackColor: #000814;
+  --greyColor: #c5c5c5;
+  --transparent: transparent;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --primary: #061425;
+    --accent: #f4d35e;
+    --secondary: #2b3036;
+    --secondaryAccent: #577399;
+    --secondaryLight: #516170;
+    --light: #bdd5ea;
+
+    --primaryDark: #191919;
+    --highlight: #e80000;
+    --whiteColor: #f7f7ff;
+    --blackColor: #000814;
+    --greyColor: #c5c5c5;
+    --transparent: transparent;
+  }
+}
+
+@layer components {
+  /* This won't be included in your compiled CSS unless you actually use it */
+  .site-core {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .site-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+      180deg,
+      transparent 0,
+      hsla(0, 0%, 100%, 0.05) 0.5%,
+      transparent 1%
+    );
+    background-image: radial-gradient(
+      hsla(0, 0%, 100%, 0.05) 3px,
+      transparent 0
+    );
+    background-repeat: repeat;
+    background-size: 65px 65px;
+  }
+
+  .border-curved-dashed {
+    background-image: url("../public/border-dashed.svg");
+    background-repeat: repeat-x;
+    background-size: 75px;
+    filter: invert(94%) sepia(97%) saturate(1611%) hue-rotate(315deg)
+      brightness(109%) contrast(91%);
+  }
+
+  .rubberband-hover {
+    transition: transform 0.2s;
+
+    &:hover {
+      cursor: default;
+      color: var(--accent);
+      transform: scaleX(1.09) scaleY(0.92);
+    }
+  }
+
+  .shape-animated {
+    @apply pointer-events-auto transition-transform ease-in-out duration-1000  hover:translate-y-[-10px];
+  }
+}
