@@ -72,6 +72,20 @@
       brightness(109%) contrast(91%);
   }
 
+  .section-portfolio {
+    &:before {
+      content: " ";
+      position: absolute;
+      top: -150px;
+      left: 0;
+      width: 100%;
+      height: 200px;
+      background: var(--accent);
+      display: inline-block;
+      clip-path: url(#section-top);
+    }
+  }
+
   .rubberband-hover {
     transition: transform 0.2s;
 

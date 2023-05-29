@@ -35,8 +35,15 @@ export default function Home() {
             </div>
           </div>
         </section>
-
-        <section className="relative z-10 w-full h-screen flex justify-center items-center bg-accent">
+        <svg preserveAspectRatio="none">
+          <clipPath id="section-top" clipPathUnits="objectBoundingBox">
+            <path
+              transform="scale(0.00145 0.000545)"
+              d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            ></path>
+          </clipPath>
+        </svg>
+        <section className="relative section-portfolio z-10 w-full h-screen flex justify-center items-center bg-accent">
           portfolio
         </section>
         <section className="relative z-10 w-full h-screen flex justify-center items-center">
@@ -45,7 +52,7 @@ export default function Home() {
       </div>
       <div className="w-full h-screen top-0 absolute left-0 pointer-events-none">
         <div
-          className="site-grid "
+          className="site-grid fixed"
           //ref={dotGridRef}
           // style={{
           //   transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
