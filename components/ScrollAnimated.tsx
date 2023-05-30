@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -18,14 +18,22 @@ export default function ScrollAnimated({
   const ref = useRef(null);
   gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
 
+  const [isVisible, setState] = useState(false);
+
   useLayoutEffect(() => {
-    gsap.to(ref.current, {
-      scrollTrigger: {
-        scrub: true,
-      },
-      top: `${speed * -20}px`,
-      ease: "ease-out",
+    // we are using an intesectionobserver to check if they're in view onload. If they are, we don't trigger them
+    // otherwise they'll immediately fly upwards. (im not sure if this the best way to do this?)
+    const observer = new IntersectionObserver(([entry]) => {
+      gsap.to(ref.current, {
+        scrollTrigger: {
+          scrub: true,
+          trigger: entry.isIntersecting ? null : ref.current,
+        },
+        translateY: `-${100 * speed}px`,
+        ease: "ease-out",
+      });
     });
+    observer.observe(ref.current!);
 
     return () => {
       // cleanup code (optional)
