@@ -8,17 +8,17 @@ export default function ScrollAnimated({
   children,
   className,
   style,
-  speed = 10,
+  offsetAmount = 10,
+  movementSpeed = 1, // 0.1 - 1.
 }: {
   children: React.ReactElement[] | React.ReactElement;
   className?: string;
   style?: any;
-  speed?: number;
+  offsetAmount?: number;
+  movementSpeed?: number;
 }) {
   const ref = useRef(null);
   gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
-
-  const [isVisible, setState] = useState(false);
 
   useLayoutEffect(() => {
     // we are using an intesectionobserver to check if they're in view onload. If they are, we don't trigger them
@@ -29,7 +29,7 @@ export default function ScrollAnimated({
           scrub: true,
           trigger: entry.isIntersecting ? null : ref.current,
         },
-        translateY: `-${100 * speed}px`,
+        translateY: `-${150 + offsetAmount * movementSpeed}px`,
         ease: "ease-out",
       });
     });

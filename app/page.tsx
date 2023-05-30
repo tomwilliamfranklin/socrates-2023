@@ -73,12 +73,14 @@ export default function Home() {
 
       preShapes.push(
         <ScrollAnimated
-          speed={randomWithRange(1, 2)}
+          offsetAmount={randomWithRange(0, 20)}
+          movementSpeed={randomWithRange(0, 10) / 10}
           className={`squares shape-animated stroke-accent${randomWithRange(
             2,
             3
           )} fill-accent${randomWithRange(2, 3)} absolute top-[19vh]`}
           style={{
+            // TODO, this is a hack of 40% onwards. We should make a different container for the random shapes. (different component?)
             top: randomWithRange(40, 100) + "%",
             left: Math.floor(Math.random() * 100) + "vw",
             opacity: randomWithRange(1, 5) / 10,
@@ -154,58 +156,43 @@ export default function Home() {
             return s;
           })}
           ;
-          <ScrollAnimated
-            speed={5}
-            className="squares shape-animated fill-accent3 opacity-[0.1] absolute top-[19vh] left-[31vw] w-[70px]"
-          >
+          <ScrollAnimated className="squares shape-animated fill-accent3 opacity-[0.1] absolute top-[19vh] left-[31vw] w-[70px]">
             <div>
               <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
                 <path d="m21,21v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125z" />
               </svg>
             </div>
           </ScrollAnimated>
-          <ScrollAnimated
-            speed={3}
-            className="squares shape-animated fill-accent2 opacity-[0.1] triangle absolute top-[81vh] left-[62vw] w-[80px]"
-          >
+          <ScrollAnimated className="squares shape-animated fill-accent2 opacity-[0.1] triangle absolute top-[81vh] left-[62vw] w-[80px]">
             <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
               <path d="m21,21v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125z" />
             </svg>
           </ScrollAnimated>
           <ScrollAnimated
-            speed={4}
+            offsetAmount={30}
             className="triangle shape-animated stroke-accent1 fill-accent1 opacity-[0.6] absolute top-[17vh] left-[32vw] w-[70px]"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path fill="none" strokeWidth="1" d="M12 2L2 22h20L12 2z" />
             </svg>
           </ScrollAnimated>
-          <ScrollAnimated
-            speed={7}
-            className="triangle shape-animated stroke-accent3 opacity-[0.6] absolute top-[70vh] left-[90vw] w-[70px] rotate-[30deg]"
-          >
+          <ScrollAnimated className="triangle shape-animated stroke-accent3 opacity-[0.6] absolute top-[70vh] left-[90vw] w-[70px] rotate-[30deg]">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path fill="none" strokeWidth="1" d="M12 2L2 22h20L12 2z" />
             </svg>
           </ScrollAnimated>
-          <ScrollAnimated
-            speed={4}
-            className="square shape-animated stroke-accent3 opacity-[0.2] absolute top-[32vh] left-[51vw] w-[70px]  rotate-[-13deg]"
-          >
+          <ScrollAnimated className="square shape-animated stroke-accent3 opacity-[0.2] absolute top-[32vh] left-[51vw] w-[70px]  rotate-[-13deg]">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path fill="none" strokeWidth="1" d="M2 2h20v20H2z" />
+            </svg>
+          </ScrollAnimated>
+          <ScrollAnimated className="square shape-animated stroke-accent2 opacity-[0.4] absolute top-[12vh] left-[81vw] w-[50px]">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
               <path fill="none" strokeWidth="1" d="M2 2h20v20H2z" />
             </svg>
           </ScrollAnimated>
           <ScrollAnimated
-            speed={2}
-            className="square shape-animated stroke-accent2 opacity-[0.4] absolute top-[12vh] left-[81vw] w-[50px]"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path fill="none" strokeWidth="1" d="M2 2h20v20H2z" />
-            </svg>
-          </ScrollAnimated>
-          <ScrollAnimated
-            speed={5}
+            offsetAmount={20}
             className="square shape-animated stroke-accent1 opacity-[0.6] absolute top-[80vh] left-[61vw] w-[40px]  rotate-[-53deg]"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -213,7 +200,7 @@ export default function Home() {
             </svg>
           </ScrollAnimated>
           <ScrollAnimated
-            speed={7}
+            offsetAmount={50}
             className="circle shape-animated stroke-accent2 opacity-[0.6] absolute top-[71vh] left-[12vw] w-[70px]"
           >
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -221,7 +208,7 @@ export default function Home() {
             </svg>
           </ScrollAnimated>
           <ScrollAnimated
-            speed={3}
+            offsetAmount={10}
             className="squiggle shape-animated stroke-accent opacity-[0.2] absolute top-[12vh] left-[81.5vw] w-[200px] rotate-[-60deg]"
           >
             <svg viewBox="0 -2 490 500" strokeWidth={2} fill="none">
@@ -238,10 +225,7 @@ export default function Home() {
               </g>
             </svg>
           </ScrollAnimated>
-          <ScrollAnimated
-            speed={5}
-            className="border-curved-dashed shape-animated stroke-accent translate-x-[-400px] opacity-[0.2] absolute top-[65vh] left-[12vw] h-[20px] w-[700px] rotate-[-30deg]"
-          >
+          <ScrollAnimated className="border-curved-dashed shape-animated stroke-accent translate-x-[-400px] opacity-[0.2] absolute top-[65vh] left-[12vw] h-[20px] w-[700px] rotate-[-30deg]">
             <div />
           </ScrollAnimated>
         </div>
