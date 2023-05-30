@@ -1,6 +1,7 @@
 "use client";
 
 import AnimatedTitle from "@/components/animatedTitle";
+import Portfolio from "@/components/Portfolio";
 import PortfolioItem from "@/components/PortfolioItem";
 import ScrollAnimated from "@/components/ScrollAnimated";
 import { useEffect, useState } from "react";
@@ -145,11 +146,7 @@ export default function Home() {
           </clipPath>
         </svg>
         <section className="section-portfolio relative  p-20 z-10 w-full flex justify-center items-center bg-accent">
-          <div className="space-y-20 w-full h-full flex flex-col justify-start items-center odd:bg-gray-200 ">
-            <PortfolioItem />
-            <PortfolioItem />
-            <PortfolioItem />
-          </div>
+          <Portfolio />
         </section>
         <section className="relative z-10 w-full h-screen flex justify-center items-center">
           footer
