@@ -3,6 +3,7 @@ import React, { useLayoutEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
+import classNames from "classnames";
 
 export default function ScrollAnimated({
   children,
@@ -41,7 +42,11 @@ export default function ScrollAnimated({
   }, []); // <- empty dependency Array so it doesn't re-run on every render!
 
   return (
-    <div style={style} className={className} ref={ref}>
+    <div
+      style={style}
+      className={classNames(className, " hover:translate-y-50 z-20")}
+      ref={ref}
+    >
       {children}
     </div>
   );
