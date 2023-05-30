@@ -32,9 +32,12 @@ export default function PortfolioItem(props: Props) {
             <h3 className="text-4xl text-center">{props.name}</h3>
             <p className=" text-lg text-center mt-5">{props.description}</p>
             <div className="flex justify-center mt-5 flex-wrap gap-5 max-w-[200px]">
-              {props.tech.map((t) => {
+              {props.tech.map((t, index) => {
                 return (
-                  <div className="text-md bg-accent2 p-2 rounded-md h-fit whitespace-nowrap">
+                  <div
+                    key={index}
+                    className="text-md bg-accent2 p-2 rounded-md h-fit whitespace-nowrap"
+                  >
                     {t}
                   </div>
                 );
