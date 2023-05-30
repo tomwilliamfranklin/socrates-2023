@@ -1,19 +1,8 @@
-"use client";
-
 import "./globals.scss";
 import { Inter } from "next/font/google";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
-
-import { storyblokInit, apiPlugin } from "@storyblok/react";
-
-storyblokInit({
-  // todo env file.
-  accessToken: "tXC8d4YLTwOfvwPBiQzuxgtt",
-
-  use: [apiPlugin],
-});
 
 const inter = Inter({ subsets: ["latin"] });
 
