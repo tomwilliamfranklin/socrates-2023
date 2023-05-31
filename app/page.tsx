@@ -17,8 +17,7 @@ export default function Home() {
   const getShapeType = (type: number) => {
     switch (type) {
       // Squares
-      case 6:
-      case 7:
+      case 8:
         return (
           <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
             <path d="m21,21v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125z" />
@@ -79,19 +78,22 @@ export default function Home() {
                 title={<div className="font-extralight">Tom Franklin</div>}
               />
             </h2>
-            <h1>
+            <h1 className=" ">
               <AnimatedTitle
                 title={
                   <div className="font-extralight">
                     <span className="text-accent3">Creative</span>
                     <span className="text-accent2 font-normal">
                       {" "}
-                      front-end developer{" "}
-                    </span>
+                      front-end{" "}
+                    </span>{" "}
+                    <br className="md:hidden" />
+                    <span className="text-accent2 font-normal">developer </span>
                     <br />
                     <span className="text-accent3">
                       <span className="text-accent3">for the</span>
-                      <span className="font-normal"> UI/UX</span>
+                      <span className="font-normal"> UI/UX</span>{" "}
+                      <br className="md:hidden" />
                       <span className="text-accent3"> industry.</span>
                     </span>
                   </div>
@@ -118,7 +120,7 @@ export default function Home() {
         <section className="section-portfolio relative p-20 w-full flex justify-center items-center bg-accent">
           <Portfolio />
         </section>
-        <section className="relative w-full h-screen flex justify-center items-center flex-col p-5 pt-40 mb-[50px]">
+        <section className="relative w-full flex justify-center items-center flex-col p-5 pt-40 mb-[50px]">
           <div className="flex-1 max-w-[1000px] h-full flex flex-col">
             <h2>
               <AnimatedTitle
@@ -132,7 +134,8 @@ export default function Home() {
                       Role
                     </span>
                     <span className="text-accent3"> you would</span> <br />
-                    <span className="text-accent3"> like to discuss?</span>
+                    <span className="text-accent3"> like to discuss?</span>{" "}
+                    <br className="md:hidden" />
                     <span className="font-normal"> Reach out, </span>
                     <span className="text-accent3"> let's talk! </span>
                   </div>
@@ -140,7 +143,7 @@ export default function Home() {
               />
             </h2>
           </div>
-          <div className="max-w-[800px] w-full flex-[3] mt-[0px]">
+          <div className="max-w-[800px] w-full flex-[3] mt-[50px]">
             <form
               id="contactForm"
               className="section-contact-form"

@@ -73,6 +73,7 @@
   }
 
   .section-portfolio {
+    margin-top: -150px;
     &:before {
       content: " ";
       position: absolute;
@@ -151,6 +152,11 @@
     width: 100%;
     align-items: flex-start;
     gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @apply sm:flex-row;
   }
 
   .form-column {
@@ -189,11 +195,11 @@
 
   h1 {
     word-break: break-all;
-    @apply text-2xl sm:text-4xl md:text-6xl lg:text-7xl;
+    @apply text-4xl sm:text-4xl md:text-6xl lg:text-7xl;
   }
 
   h2 {
-    @apply text-xl md:text-5xl;
+    @apply text-4xl md:text-5xl;
   }
 
   h3 {
