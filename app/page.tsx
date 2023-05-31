@@ -102,32 +102,32 @@ export default function Home() {
   return (
     <div className="site-core text-whiteColor bg-secondary">
       <div className="site-homepage relative">
-        <section className="w-full h-screen flex pb-[200px] ">
-          <div className=" max-w-7xl w-full m-auto">
-            <div className="text-5xl mb-10">
+        <section className="w-full h-screen flex pb-[200px] ml-20 xl:ml-0">
+          <div className="max-w-7xl w-full m-auto">
+            <h2 className="mb-10">
               <AnimatedTitle
                 title={<div className="font-extralight">Tom Franklin</div>}
               />
-            </div>
-            <div className=" text-7xl">
+            </h2>
+            <h1>
               <AnimatedTitle
                 title={
-                  <div className=" font-extralight">
-                    <span className=" text-accent2  font-normal">Creative</span>
-                    <span className=" text-accent3">
+                  <div className="font-extralight">
+                    <span className="text-accent2 font-normal">Creative</span>
+                    <span className="text-accent3">
                       {" "}
                       full-stack development{" "}
                     </span>
                     <br />
-                    <span className=" text-accent3">
-                      <span className=" text-accent3">for the</span>
+                    <span className="text-accent3">
+                      <span className="text-accent3">for the</span>
                       <span className="font-normal"> games</span>
-                      <span className=" text-accent3"> industry.</span>
+                      <span className="text-accent3"> industry.</span>
                     </span>
                   </div>
                 }
               />
-            </div>
+            </h1>
           </div>
         </section>
         <svg preserveAspectRatio="none">
@@ -145,10 +145,10 @@ export default function Home() {
             ></path>
           </clipPath>
         </svg>
-        <section className="section-portfolio relative  p-20 z-10 w-full flex justify-center items-center bg-accent">
+        <section className="section-portfolio relative p-20 w-full flex justify-center items-center bg-accent">
           <Portfolio />
         </section>
-        <section className="relative z-10 w-full h-screen flex justify-center items-center">
+        <section className="relative w-full h-screen flex justify-center items-center">
           footer
         </section>
       </div>
@@ -160,7 +160,7 @@ export default function Home() {
           //   transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
           // }}
         />
-        <div className="absolute w-full h-full z-20">
+        <div className="absolute w-full h-full">
           {shapes.map((s) => {
             return s;
           })}

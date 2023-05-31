@@ -15,10 +15,10 @@ export default function PortfolioItem(props: Props) {
 
   return (
     <div className=" relative portfolio-item flex p-3 [&>*]:odd:flex-row-reverse z-30 rounded-lg ">
-      <div className="h-full w-full flex rounded-lg overflow-hidden">
-        <div className="h-full flex-[1.5] bg-accent2 p-10 ">
-          <div className="relative w-full h-full flex justify-center items-cente overflow-hidden rounded-lg shadow-lg">
-            <div className="relative w-full h-full hover:scale-[1.05] transition-transform duration-[0.8s]">
+      <div className="h-full w-full flex rounded-lg overflow-hidden custom-shadow">
+        <div className="h-full flex-[1.5] bg-whiteColor p-10 ">
+          <div className="relative w-full h-full flex justify-center items-cente overflow-hidden rounded-lg custom-shadow">
+            <div className="relative w-full h-full hover:scale-[1.05] transition-transform duration-[0.8s] ">
               <img
                 onClick={onSelectItem}
                 className="absolute top-0  hover:translate-y-[calc(-100%+440px)] transition-all ease-in duration-[5s] cursor-pointer min-h-full object-cover"
@@ -36,7 +36,7 @@ export default function PortfolioItem(props: Props) {
                 return (
                   <div
                     key={index}
-                    className="text-md bg-accent2 p-2 rounded-md h-fit whitespace-nowrap"
+                    className="text-md bg-accent2 p-2 rounded-md h-fit whitespace-nowrap custom-shadow"
                   >
                     {t}
                   </div>

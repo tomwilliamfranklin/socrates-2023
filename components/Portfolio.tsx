@@ -14,15 +14,15 @@ export const portfolioData: PortfolioData[] = [
   {
     name: "F1 Manager UI",
     description:
-      "As part of the development team, I contributed to the development and implementation of the UI for F1 Manager 2022",
+      "As part of the Frontier UI team, I contributed to the development and implementation of the UI for F1 Manager 2022",
     tech: ["Coherent Gameface", "SASS", "UE4"],
     link: "https://www.f1manager.com/",
-    image: "",
+    image: "f1manager.jpg",
   },
   {
     name: "Grove Group",
     description:
-      "Worked with Grove Group to produce their primary website for commecial services",
+      "Worked with Grove Group Electrical to produce their primary website for commecial services",
     tech: ["React", "SASS", "DecapCRM"],
     link: "https://edison-18de75.netlify.app/",
     image: "grove-electrical.jpeg",
@@ -38,7 +38,7 @@ export const portfolioData: PortfolioData[] = [
   {
     name: "Dota Meme Team",
     description:
-      "Inspired website for generating team compositions for the video game Dota 2. Mimicing the Dota 2 UI style",
+      "Fan website for video game Dota 2. Generates different team ideas to play with friends",
     tech: ["React", "SASS"],
     link: "https://www.dotamemeteam.com/",
     image: "dotamemeteam.jpeg",

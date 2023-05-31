@@ -20,10 +20,11 @@ module.exports = {
 
       primaryDark: "#191919",
       highlight: "#e80000",
-      whiteColor: "#f7f7ff",
+      whiteColor: "#f4f4f4",
       blackColor: "#000814",
       greyColor: "#c5c5c5",
       transparent: "transparent",
+      boxShadow: "rgba(0,0,0,0.4)",
     },
     //   extend: {
     //     backgroundImage: {

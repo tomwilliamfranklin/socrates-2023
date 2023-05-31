@@ -125,4 +125,16 @@
       background-color: #0ea5e9;
     }
   }
+
+  .custom-shadow {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  }
+
+  h1 {
+    @apply text-2xl sm:text-4xl md:text-6xl lg:text-7xl;
+  }
+
+  h2 {
+    @apply text-5xl;
+  }
 }
