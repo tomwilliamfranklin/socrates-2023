@@ -75,7 +75,7 @@ export default function Home() {
           <div className="max-w-7xl w-full m-auto">
             <h2 className="mb-10">
               <AnimatedTitle
-                title={<div className="font-extralight">Tom Franklin</div>}
+                title={<div className="md:font-extralight">Tom Franklin</div>}
               />
             </h2>
             <h1 className=" ">
@@ -133,7 +133,10 @@ export default function Home() {
                       {" "}
                       Role
                     </span>
-                    <span className="text-accent3"> you would</span> <br />
+                    <span className="text-accent3"> you </span>
+                    <br className="md:hidden" />
+                    <span className="text-accent3"> would</span>{" "}
+                    <br className="hidden md:block" />
                     <span className="text-accent3"> like to discuss?</span>{" "}
                     <br className="md:hidden" />
                     <span className="font-normal"> Reach out, </span>
