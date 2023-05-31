@@ -16,52 +16,22 @@ export default function Home() {
 
   const getShapeType = (type: number) => {
     switch (type) {
-      // Square
-      case 3:
-      case 4:
-        return (
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path fill="none" strokeWidth="1" d="M2 2h20v20H2z" />
-          </svg>
-        );
-      // Circle
-      case 5:
-      case 6:
-        return (
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <circle cx="12" cy="12" r="10" fill="none" strokeWidth="1" />
-          </svg>
-        );
       // Squares
+      case 6:
       case 7:
         return (
           <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
             <path d="m21,21v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125z" />
           </svg>
         );
-      case 8:
-        return (
-          <svg viewBox="0 -2 490 500" strokeWidth={2} fill="none">
-            <g>
-              <g>
-                <path
-                  d="M234.971,398.156l45.9-35.6c15.2-10.7,35.8-51.2,1-78.6l-48-37.7c-4.2-2.5-4.9-8.6,1-12.6l44.9-32.5
-			c22.5-16.5,32.5-53.7,0-79.7l-44.8-33.6c-5-3.7-4.6-8.9,1-12.6l52.2-38.8c9.4-6.3,10.4-18.9,4.2-28.3s-18.8-10.5-28.1-4.2
-			l-52.2,38.8c-30.5,24.7-29.8,56.3,0,79.7l44.9,33.5c5.8,3.8,4.1,10.2,0,12.6l-45.9,33.5c-28.7,21.6-29.8,58-1,78.6l48,37.7
-			c4.9,3.1,3.7,9.5-1,12.6l-47.1,34.7c-29.8,23.2-25.3,58.9-1,78.6l54.2,41.9c4.2,3.1,18.8,8.7,28.2-5.2c7.3-8.4,6.3-21-3.1-28.3
-			l-54.3-41.9C229.571,407.356,229.771,401.856,234.971,398.156z"
-                />
-              </g>
-            </g>
-          </svg>
-        );
-      // Triangle
-      case 1:
-      case 2:
       default:
         return (
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path fill="none" strokeWidth="1" d="M12 2L2 22h20L12 2z" />
+          <svg
+            viewBox="0 0 20 20"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M 5.3378906 2 L 0.671875 10 L 5.3378906 18 L 14.662109 18 L 19.328125 10 L 14.662109 2 L 5.3378906 2 z M 5.9121094 3 L 14.087891 3 L 18.171875 10 L 14.087891 17 L 5.9121094 17 L 1.828125 10 L 5.9121094 3 z " />
           </svg>
         );
     }
@@ -70,7 +40,7 @@ export default function Home() {
   useEffect(() => {
     const preShapes = [];
 
-    for (let i = 0; i < 20; i++) {
+    for (let i = 0; i < 30; i++) {
       const randomType = Math.floor(Math.random() * 9);
 
       preShapes.push(
@@ -83,7 +53,7 @@ export default function Home() {
           )} fill-accent${randomWithRange(2, 3)} absolute top-[19vh]`}
           style={{
             // TODO, this is a hack of 40% onwards. We should make a different container for the random shapes. (different component?)
-            top: randomWithRange(40, 100) + "%",
+            top: randomWithRange(0, 100) + "%",
             left: Math.floor(Math.random() * 100) + "vw",
             opacity: randomWithRange(1, 5) / 10,
             width: `${randomWithRange(20, 70)}px`,
@@ -102,7 +72,7 @@ export default function Home() {
   return (
     <div className="site-core text-whiteColor bg-secondary">
       <div className="site-homepage relative">
-        <section className="w-full h-screen flex pb-[200px] ml-20 xl:ml-0">
+        <section className="w-full h-screen flex pb-[200px] ml-5">
           <div className="max-w-7xl w-full m-auto">
             <h2 className="mb-10">
               <AnimatedTitle
@@ -113,15 +83,15 @@ export default function Home() {
               <AnimatedTitle
                 title={
                   <div className="font-extralight">
-                    <span className="text-accent2 font-normal">Creative</span>
-                    <span className="text-accent3">
+                    <span className="text-accent3">Creative</span>
+                    <span className="text-accent2 font-normal">
                       {" "}
-                      full-stack development{" "}
+                      front-end developer{" "}
                     </span>
                     <br />
                     <span className="text-accent3">
                       <span className="text-accent3">for the</span>
-                      <span className="font-normal"> games</span>
+                      <span className="font-normal"> UI/UX</span>
                       <span className="text-accent3"> industry.</span>
                     </span>
                   </div>
@@ -148,8 +118,93 @@ export default function Home() {
         <section className="section-portfolio relative p-20 w-full flex justify-center items-center bg-accent">
           <Portfolio />
         </section>
-        <section className="relative w-full h-screen flex justify-center items-center">
-          footer
+        <section className="relative w-full h-screen flex justify-center items-center flex-col p-5 pt-40">
+          <div className="flex-1 max-w-[1000px] h-full flex flex-col">
+            <h2>
+              <AnimatedTitle
+                title={
+                  <div className="font-extralight text-center">
+                    <span className="text-accent3 whitespace-nowrap">
+                      Have a{" "}
+                    </span>{" "}
+                    <span className="text-accent2 font-normal whitespace-nowrap">
+                      {" "}
+                      Role
+                    </span>
+                    <span className="text-accent3"> you would</span> <br />
+                    <span className="text-accent3"> like to discuss?</span>
+                    <span className="font-normal"> Reach out, </span>
+                    <span className="text-accent3"> let's talk! </span>
+                  </div>
+                }
+              />
+            </h2>
+          </div>
+          <div className="max-w-[800px] w-full flex-[3] mt-[0px]">
+            <form
+              id="contactForm"
+              className="section-contact-form"
+              // onSubmit={this.onContactSubmit}
+            >
+              <div className="form-row">
+                <div className="form-column">
+                  <label>
+                    name<span>*</span>
+                  </label>
+                  <input type="text" name="name" id="name" required />
+                </div>
+                <div className="form-column">
+                  <label>
+                    email<span>*</span>
+                  </label>
+                  <input type="text" name="name" id="name" required />
+                </div>
+              </div>
+              <div className="form-row">
+                <div className="form-column">
+                  <label>
+                    company<span>*</span>
+                  </label>
+                  <input type="text" name="name" id="name" required />
+                </div>
+                <div className="form-column">
+                  <label>
+                    country<span>*</span>
+                  </label>
+                  <input type="text" name="name" id="name" required />
+                </div>
+              </div>
+              <div className="form-row">
+                <div className="form-column">
+                  <label>
+                    current website <span>(optional)</span>
+                  </label>
+                  <input type="text" name="name" id="name" required />
+                </div>
+              </div>
+              <div className="form-row">
+                <div className="form-column">
+                  <label>
+                    message<span>*</span>
+                  </label>
+                  <textarea
+                    name="message"
+                    rows={5}
+                    id="message"
+                    required
+                  ></textarea>
+                </div>
+              </div>
+              <div className="form-row justify-end">
+                <button
+                  className="send-button flex justify-center w-fit mt-5"
+                  //onClick={onSelectItem}
+                >
+                  send
+                </button>
+              </div>
+            </form>
+          </div>
         </section>
       </div>
       <div className="w-full h-full top-0 absolute left-0 pointer-events-none">
@@ -164,79 +219,6 @@ export default function Home() {
           {shapes.map((s) => {
             return s;
           })}
-          ;
-          <ScrollAnimated className="squares shape-animated fill-accent3 opacity-[0.1] absolute top-[19vh] left-[31vw] w-[70px]">
-            <div>
-              <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-                <path d="m21,21v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125z" />
-              </svg>
-            </div>
-          </ScrollAnimated>
-          <ScrollAnimated className="squares shape-animated fill-accent2 opacity-[0.1] triangle absolute top-[81vh] left-[62vw] w-[80px]">
-            <svg viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
-              <path d="m21,21v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm-334.875,167.4375v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125zm167.4375,0v135.125h135.125v-135.125h-135.125z" />
-            </svg>
-          </ScrollAnimated>
-          <ScrollAnimated
-            offsetAmount={30}
-            className="triangle shape-animated stroke-accent1 fill-accent1 opacity-[0.6] absolute top-[17vh] left-[32vw] w-[70px]"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path fill="none" strokeWidth="1" d="M12 2L2 22h20L12 2z" />
-            </svg>
-          </ScrollAnimated>
-          <ScrollAnimated className="triangle shape-animated stroke-accent3 opacity-[0.6] absolute top-[70vh] left-[90vw] w-[70px] rotate-[30deg]">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path fill="none" strokeWidth="1" d="M12 2L2 22h20L12 2z" />
-            </svg>
-          </ScrollAnimated>
-          <ScrollAnimated className="square shape-animated stroke-accent3 opacity-[0.2] absolute top-[32vh] left-[51vw] w-[70px]  rotate-[-13deg]">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path fill="none" strokeWidth="1" d="M2 2h20v20H2z" />
-            </svg>
-          </ScrollAnimated>
-          <ScrollAnimated className="square shape-animated stroke-accent2 opacity-[0.4] absolute top-[12vh] left-[81vw] w-[50px]">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path fill="none" strokeWidth="1" d="M2 2h20v20H2z" />
-            </svg>
-          </ScrollAnimated>
-          <ScrollAnimated
-            offsetAmount={20}
-            className="square shape-animated stroke-accent1 opacity-[0.6] absolute top-[80vh] left-[61vw] w-[40px]  rotate-[-53deg]"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <path fill="none" strokeWidth="1" d="M2 2h20v20H2z" />
-            </svg>
-          </ScrollAnimated>
-          <ScrollAnimated
-            offsetAmount={50}
-            className="circle shape-animated stroke-accent2 opacity-[0.6] absolute top-[71vh] left-[12vw] w-[70px]"
-          >
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-              <circle cx="12" cy="12" r="10" fill="none" strokeWidth="1" />
-            </svg>
-          </ScrollAnimated>
-          <ScrollAnimated
-            offsetAmount={10}
-            className="squiggle shape-animated stroke-accent opacity-[0.2] absolute top-[12vh] left-[81.5vw] w-[200px] rotate-[-60deg]"
-          >
-            <svg viewBox="0 -2 490 500" strokeWidth={2} fill="none">
-              <g>
-                <g>
-                  <path
-                    d="M234.971,398.156l45.9-35.6c15.2-10.7,35.8-51.2,1-78.6l-48-37.7c-4.2-2.5-4.9-8.6,1-12.6l44.9-32.5
-			c22.5-16.5,32.5-53.7,0-79.7l-44.8-33.6c-5-3.7-4.6-8.9,1-12.6l52.2-38.8c9.4-6.3,10.4-18.9,4.2-28.3s-18.8-10.5-28.1-4.2
-			l-52.2,38.8c-30.5,24.7-29.8,56.3,0,79.7l44.9,33.5c5.8,3.8,4.1,10.2,0,12.6l-45.9,33.5c-28.7,21.6-29.8,58-1,78.6l48,37.7
-			c4.9,3.1,3.7,9.5-1,12.6l-47.1,34.7c-29.8,23.2-25.3,58.9-1,78.6l54.2,41.9c4.2,3.1,18.8,8.7,28.2-5.2c7.3-8.4,6.3-21-3.1-28.3
-			l-54.3-41.9C229.571,407.356,229.771,401.856,234.971,398.156z"
-                  />
-                </g>
-              </g>
-            </svg>
-          </ScrollAnimated>
-          <ScrollAnimated className="border-curved-dashed shape-animated stroke-accent translate-x-[-400px] opacity-[0.2] absolute top-[65vh] left-[12vw] h-[20px] w-[700px] rotate-[-30deg]">
-            <div />
-          </ScrollAnimated>
         </div>
       </div>
     </div>

@@ -21,8 +21,9 @@ module.exports = {
       primaryDark: "#191919",
       highlight: "#e80000",
       whiteColor: "#f4f4f4",
+      whiteColorTran: "rgba(244, 244, 244, 0.8)",
       blackColor: "#000814",
-      greyColor: "#c5c5c5",
+      greyColor: "#535353",
       transparent: "transparent",
       boxShadow: "rgba(0,0,0,0.4)",
     },
@@ -35,4 +36,10 @@ module.exports = {
     //   },
   },
   plugins: [],
+  safelist: [
+    {
+      //makes the colors load for dynamic usage even if they arent used elsewhere
+      pattern: /(fill)-accent(1|2|3)/,
+    },
+  ],
 };

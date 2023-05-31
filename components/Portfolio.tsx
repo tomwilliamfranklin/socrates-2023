@@ -47,7 +47,7 @@ export const portfolioData: PortfolioData[] = [
 
 export default function Portfolio() {
   return (
-    <div className="space-y-20 w-full h-full flex flex-col justify-start items-center ">
+    <div className="w-full h-full flex flex-col justify-start items-center space-y-10 md:space-y-20">
       {portfolioData.map((p, index) => {
         return <PortfolioItem key={index} {...p} />;
       })}
