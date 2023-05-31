@@ -40,7 +40,7 @@ export default function Home() {
   useEffect(() => {
     const preShapes = [];
 
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 40; i++) {
       const randomType = Math.floor(Math.random() * 9);
 
       preShapes.push(
@@ -50,7 +50,7 @@ export default function Home() {
           className={`squares shape-animated stroke-accent${randomWithRange(
             2,
             3
-          )} fill-accent${randomWithRange(2, 3)} absolute top-[19vh]`}
+          )} fill-accent${randomWithRange(1, 3)} absolute top-[19vh]`}
           style={{
             // TODO, this is a hack of 40% onwards. We should make a different container for the random shapes. (different component?)
             top: randomWithRange(0, 100) + "%",
@@ -118,7 +118,7 @@ export default function Home() {
         <section className="section-portfolio relative p-20 w-full flex justify-center items-center bg-accent">
           <Portfolio />
         </section>
-        <section className="relative w-full h-screen flex justify-center items-center flex-col p-5 pt-40">
+        <section className="relative w-full h-screen flex justify-center items-center flex-col p-5 pt-40 mb-[50px]">
           <div className="flex-1 max-w-[1000px] h-full flex flex-col">
             <h2>
               <AnimatedTitle
