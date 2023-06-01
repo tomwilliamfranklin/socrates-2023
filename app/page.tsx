@@ -148,54 +148,77 @@ export default function Home() {
           </div>
           <div className="max-w-[800px] w-full flex-[3] mt-[50px]">
             <form
+              className="section-contact-form"
               name="contact-form"
               action="/"
               method="POST"
               data-netlify="true"
             >
               <input type="hidden" name="form-name" value="contact-form" />
-              <p>
-                <label htmlFor="yourname">Your Name:</label>
-                <input type="text" name="name" id="yourname" />
-              </p>
-              <p>
-                <label htmlFor="youremail">Your Email: </label>{" "}
-                <input type="email" name="email" id="youremail" />
-              </p>
-              <p>
-                <label htmlFor="yourmessage">Message: </label>
-                <textarea name="message" id="yourmessage"></textarea>
-              </p>
-              <p>
-                <button type="submit">Send</button>
-              </p>
-              <style jsx>{`
-                label {
-                  font-size: 0.8rem;
-                }
-
-                input,
-                textarea {
-                  width: 100%;
-                  height: 40px;
-                  border: none;
-                  border-bottom: 1px solid #d6d6d6;
-                  font-size: 1.3rem;
-                }
-
-                input:focus,
-                textarea:focus {
-                  outline: 1px dotted #d6d6d6;
-                }
-
-                button {
-                  padding: 20px;
-                  background: black;
-                  color: white;
-                  border-radius: 10px;
-                  font-size: 1.3rem;
-                }
-              `}</style>
+              <div className="form-row">
+                <div className="form-column">
+                  <label>
+                    name<span>*</span>
+                  </label>
+                  <input title="name" type="text" name="name" required />
+                </div>
+                <div className="form-column">
+                  <label>
+                    email<span>*</span>
+                  </label>
+                  <input title="email" type="text" name="email" required />
+                </div>
+                <div className="form-column hidden">
+                  <label>
+                    Don’t fill this out if you’re human:{" "}
+                    <input title="text" type="text" name="bot-field" />
+                  </label>
+                </div>
+              </div>
+              <div className="form-row">
+                <div className="form-column">
+                  <label>
+                    company<span>*</span>
+                  </label>
+                  <input title="company" type="text" name="company" required />
+                </div>
+                <div className="form-column">
+                  <label>
+                    country<span>*</span>
+                  </label>
+                  <input title="country" type="text" name="country" required />
+                </div>
+              </div>
+              <div className="form-row">
+                <div className="form-column">
+                  <label>
+                    current website <span>(optional)</span>
+                  </label>
+                  <input title="website" type="text" name="website" />
+                </div>
+              </div>
+              <div className="form-row">
+                <div className="form-column">
+                  <label>
+                    message<span>*</span>
+                  </label>
+                  <textarea
+                    title="message"
+                    name="message"
+                    rows={5}
+                    required
+                  ></textarea>
+                </div>
+              </div>
+              <div className="form-row justify-end">
+                <button
+                  className="send-button flex justify-center w-fit mt-5"
+                  //onClick={onSelectItem}
+                  type="submit"
+                >
+                  send
+                </button>
+              </div>
             </form>
           </div>
         </section>
