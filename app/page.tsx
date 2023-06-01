@@ -152,6 +152,7 @@ export default function Home() {
               method="POST"
               data-netlify="true"
               netlify-honeypot="bot-field"
+              name="contact"
               // onSubmit={this.onContactSubmit}
             >
               <div className="form-row">
