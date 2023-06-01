@@ -148,7 +148,6 @@ export default function Home() {
           </div>
           <div className="max-w-[800px] w-full flex-[3] mt-[50px]">
             <form
-              id="contactForm"
               className="section-contact-form"
               method="POST"
               data-netlify="true"
@@ -160,18 +159,18 @@ export default function Home() {
                   <label>
                     name<span>*</span>
                   </label>
-                  <input type="text" name="name" id="name" required />
+                  <input type="text" name="name" required />
                 </div>
                 <div className="form-column">
                   <label>
                     email<span>*</span>
                   </label>
-                  <input type="text" name="name" id="name" required />
+                  <input type="text" name="email" required />
                 </div>
                 <div className="form-column hidden">
                   <label>
                     Don’t fill this out if you’re human:{" "}
-                    <input name="bot-field" />
+                    <input type="text" name="bot-field" />
                   </label>
                 </div>
               </div>
@@ -180,13 +179,13 @@ export default function Home() {
                   <label>
                     company<span>*</span>
                   </label>
-                  <input type="text" name="name" id="name" required />
+                  <input type="text" name="company" required />
                 </div>
                 <div className="form-column">
                   <label>
                     country<span>*</span>
                   </label>
-                  <input type="text" name="name" id="name" required />
+                  <input type="text" name="country" required />
                 </div>
               </div>
               <div className="form-row">
@@ -194,7 +193,7 @@ export default function Home() {
                   <label>
                     current website <span>(optional)</span>
                   </label>
-                  <input type="text" name="name" id="name" />
+                  <input type="text" name="website" />
                 </div>
               </div>
               <div className="form-row">
@@ -202,12 +201,7 @@ export default function Home() {
                   <label>
                     message<span>*</span>
                   </label>
-                  <textarea
-                    name="message"
-                    rows={5}
-                    id="message"
-                    required
-                  ></textarea>
+                  <textarea name="message" rows={5} required></textarea>
                 </div>
               </div>
               <div className="form-row justify-end">
