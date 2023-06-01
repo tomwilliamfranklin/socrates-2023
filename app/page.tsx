@@ -148,12 +148,12 @@ export default function Home() {
           </div>
           <div className="max-w-[800px] w-full flex-[3] mt-[50px]">
             <form
-              name="contact"
-              action="/success"
+              name="contact-form"
+              action="/"
               method="POST"
               data-netlify="true"
             >
-              <input type="hidden" name="form-name" value="contact" />
+              <input type="hidden" name="form-name" value="contact-form" />
               <p>
                 <label htmlFor="yourname">Your Name:</label>
                 <input type="text" name="name" id="yourname" />
