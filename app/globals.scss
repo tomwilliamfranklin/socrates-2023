@@ -119,13 +119,12 @@
   }
 
   .button {
-    border: 2px solid rgba(255, 255, 255, 0.5);
+    border: 2px solid;
     @apply custom-shadow text-accent2 font-bold border-accent2;
     padding: 15px;
     transition: all 0.2s linear;
     &:hover {
-      border: 2px solid rgba(244, 244, 244, 0.8);
-      background-color: #0ea5e9;
+      @apply bg-accent2 text-whiteColor;
     }
   }
 
