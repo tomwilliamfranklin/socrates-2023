@@ -212,7 +212,7 @@ export default function Home() {
               </div>
               <div className="form-row justify-end">
                 <button
-                  className="send-button flex justify-center w-fit mt-5"
+                  className="button flex justify-center w-fit mt-5"
                   //onClick={onSelectItem}
                   type="submit"
                 >

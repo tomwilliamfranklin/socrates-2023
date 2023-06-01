@@ -20,8 +20,8 @@ module.exports = {
 
       primaryDark: "#191919",
       highlight: "#e80000",
-      whiteColor: "#f4f4f4",
-      whiteColorTran: "rgba(244, 244, 244, 0.8)",
+      whiteColor: "rgba(231, 231, 231, 1)",
+      whiteColorTran: "rgba(231, 231, 231, 0.9)",
       blackColor: "#000814",
       greyColor: "#535353",
       transparent: "transparent",

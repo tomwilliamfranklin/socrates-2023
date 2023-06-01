@@ -38,7 +38,7 @@ export default function PortfolioItem(props: Props) {
         </div>
         <div className="flex-[1.5] bg-whiteColorTran flex flex-col align-center justify-start p-5 pt-0 md:p-10">
           <div className="h-full flex flex-col flex-1 items-center">
-            <h3 className="text-center font-bold">{props.name}</h3>
+            <h3 className="text-center font-bold mt-5">{props.name}</h3>
             <p className="text-center mt-5 text-greyColor">
               {props.description}
             </p>
@@ -55,7 +55,7 @@ export default function PortfolioItem(props: Props) {
               })}
             </div>
             <button
-              className="button flex justify-center w-fit mt-5"
+              className="button flex justify-center w-fit mt-[40px]"
               onClick={onSelectItem}
             >
               visit the website
