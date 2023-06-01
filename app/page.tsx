@@ -155,6 +155,7 @@ export default function Home() {
               name="contact"
               // onSubmit={this.onContactSubmit}
             >
+              <input type="hidden" name="contact-form" value="contact" />
               <div className="form-row">
                 <div className="form-column">
                   <label>
