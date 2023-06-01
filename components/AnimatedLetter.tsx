@@ -23,10 +23,6 @@ type State = {
 };
 
 export default class AnimatedLetter extends Component<Props, State> {
-  static readonly defaultProps = {
-    onLoadAnimation: EAnimationType.bounceIn,
-  };
-
   state = {
     hover: false,
     onLoadAnimationName: "",
@@ -36,7 +32,7 @@ export default class AnimatedLetter extends Component<Props, State> {
   componentDidMount(): void {
     const { onLoadAnimation } = this.props;
 
-    if (onLoadAnimation) {
+    if (onLoadAnimation != undefined) {
       this.setState({
         onLoadAnimationName: `${EAnimationType[onLoadAnimation] ?? ""}`,
         loadAnimationFinished: false,
@@ -45,15 +41,16 @@ export default class AnimatedLetter extends Component<Props, State> {
   }
 
   render() {
-    const { disableOnHover, children, key } = this.props;
-    const { hover, onLoadAnimationName } = this.state;
+    const { disableOnHover, children, key, onLoadAnimation } = this.props;
+    const { hover, onLoadAnimationName, loadAnimationFinished } = this.state;
     return (
       <span
         key={key}
         className={classNames(
-          "rubberband-hover inline-block",
+          "animated-letter rubberband-hover inline-block",
           onLoadAnimationName,
           {
+            "opacity-0": onLoadAnimation != undefined && !loadAnimationFinished,
             rubberband: hover && !disableOnHover,
           }
         )}

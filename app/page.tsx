@@ -1,10 +1,12 @@
 "use client";
 
+import AnimatedLetter, { EAnimationType } from "@/components/AnimatedLetter";
 import AnimatedTitle from "@/components/animatedTitle";
 import Portfolio from "@/components/Portfolio";
-import PortfolioItem from "@/components/PortfolioItem";
 import ScrollAnimated from "@/components/ScrollAnimated";
+import classNames from "classnames";
 import { useEffect, useState } from "react";
+import { InView } from "react-intersection-observer";
 
 export default function Home() {
   const [shapes, setShapes] = useState<React.JSX.Element[]>([]);
@@ -51,15 +53,19 @@ export default function Home() {
             3
           )} fill-accent${randomWithRange(1, 3)} absolute top-[19vh]`}
           style={{
-            // TODO, this is a hack of 40% onwards. We should make a different container for the random shapes. (different component?)
+            // TODO, this is a hack of 0% onwards. We should make a different container for the random shapes. (different component?)
             top: randomWithRange(0, 100) + "%",
             left: Math.floor(Math.random() * 100) + "vw",
             opacity: randomWithRange(1, 5) / 10,
             width: `${randomWithRange(20, 70)}px`,
           }}
         >
-          <div style={{ transform: `rotate(${randomWithRange(-30, 30)}deg)` }}>
-            {getShapeType(randomType)}
+          <div className="fadeIn h-[inherit] w-[inherit]">
+            <div
+              style={{ transform: `rotate(${randomWithRange(-30, 30)}deg)` }}
+            >
+              {getShapeType(randomType)}
+            </div>
           </div>
         </ScrollAnimated>
       );
@@ -74,31 +80,97 @@ export default function Home() {
         <section className="w-full h-screen flex pb-[200px] ml-5">
           <div className="max-w-7xl w-full m-auto">
             <h2 className="mb-10">
-              <AnimatedTitle
-                title={<div className="md:font-extralight">Tom Franklin</div>}
-              />
+              <InView triggerOnce threshold={0.4}>
+                {({ inView, ref, entry }) => (
+                  <div ref={ref}>
+                    <div
+                      className={classNames(
+                        "sequence-letters md:font-extralight",
+                        {}
+                      )}
+                    >
+                      <AnimatedLetter onLoadAnimation={EAnimationType.bounceIn}>
+                        T
+                      </AnimatedLetter>
+                      <AnimatedLetter
+                        onLoadAnimation={EAnimationType.bounceInDown}
+                      >
+                        o
+                      </AnimatedLetter>
+                      <AnimatedLetter onLoadAnimation={EAnimationType.rotateIn}>
+                        m
+                      </AnimatedLetter>{" "}
+                      <AnimatedLetter onLoadAnimation={EAnimationType.rotateIn}>
+                        F
+                      </AnimatedLetter>
+                      <AnimatedLetter
+                        onLoadAnimation={EAnimationType.bounceInDown}
+                      >
+                        r
+                      </AnimatedLetter>
+                      <AnimatedLetter
+                        onLoadAnimation={EAnimationType.bounceInUp}
+                      >
+                        a
+                      </AnimatedLetter>
+                      <AnimatedLetter onLoadAnimation={EAnimationType.bounceIn}>
+                        n
+                      </AnimatedLetter>
+                      <AnimatedLetter
+                        onLoadAnimation={EAnimationType.bounceInDown}
+                      >
+                        k
+                      </AnimatedLetter>
+                      <AnimatedLetter
+                        onLoadAnimation={EAnimationType.bounceInDown}
+                      >
+                        l
+                      </AnimatedLetter>
+                      <AnimatedLetter
+                        onLoadAnimation={EAnimationType.bounceInUp}
+                      >
+                        i
+                      </AnimatedLetter>
+                      <AnimatedLetter onLoadAnimation={EAnimationType.bounceIn}>
+                        n
+                      </AnimatedLetter>
+                    </div>
+                  </div>
+                )}
+              </InView>
             </h2>
             <h1 className=" ">
-              <AnimatedTitle
-                title={
-                  <div className="font-extralight">
-                    <span className="text-accent3">Creative</span>
-                    <span className="text-accent2 font-normal">
-                      {" "}
-                      front-end{" "}
-                    </span>{" "}
-                    <br className="md:hidden" />
-                    <span className="text-accent2 font-normal">developer </span>
-                    <br />
-                    <span className="text-accent3">
-                      <span className="text-accent3">for the</span>
-                      <span className="font-normal"> UI/UX</span>{" "}
-                      <br className="md:hidden" />
-                      <span className="text-accent3"> industry.</span>
-                    </span>
-                  </div>
-                }
-              />
+              <InView triggerOnce threshold={0.4}>
+                {({ inView, ref, entry }) => (
+                  <AnimatedTitle
+                    title={
+                      <div
+                        ref={ref}
+                        className={classNames("md:font-extralight opacity-0", {
+                          slideInLeft: inView,
+                        })}
+                      >
+                        <span className="text-accent3">Creative</span>
+                        <span className="text-accent2 font-normal">
+                          {" "}
+                          front-end{" "}
+                        </span>{" "}
+                        <br className="md:hidden" />
+                        <span className="text-accent2 font-normal">
+                          developer{" "}
+                        </span>
+                        <br />
+                        <span className="text-accent3">
+                          <span className="text-accent3">for the</span>
+                          <span className="font-normal"> UI/UX</span>{" "}
+                          <br className="md:hidden" />
+                          <span className="text-accent3"> industry.</span>
+                        </span>
+                      </div>
+                    }
+                  />
+                )}
+              </InView>
             </h1>
           </div>
         </section>
@@ -120,106 +192,136 @@ export default function Home() {
         <section className="section-portfolio relative p-20 w-full flex justify-center items-center bg-accent">
           <Portfolio />
         </section>
-        <section className="relative w-full flex justify-center items-center flex-col p-5 pt-40 mb-[50px]">
+        <section className="relative w-full flex justify-center items-center flex-col p-5 pt-80 mb-[200px]">
           <div className="flex-1 max-w-[1000px] h-full flex flex-col">
-            <h2>
-              <AnimatedTitle
-                title={
-                  <div className="font-extralight text-center">
-                    <span className="text-accent3 whitespace-nowrap">
-                      Have a{" "}
-                    </span>{" "}
-                    <span className="text-accent2 font-normal whitespace-nowrap">
-                      {" "}
-                      Role
-                    </span>
-                    <span className="text-accent3"> you </span>
-                    <br className="md:hidden" />
-                    <span className="text-accent3"> would</span>{" "}
-                    <br className="hidden md:block" />
-                    <span className="text-accent3"> like to discuss?</span>{" "}
-                    <br className="md:hidden" />
-                    <span className="font-normal"> Reach out, </span>
-                    <span className="text-accent3"> let's talk! </span>
-                  </div>
-                }
-              />
-            </h2>
-          </div>
-          <div className="max-w-[800px] w-full flex-[3] mt-[50px]">
-            <form
-              className="section-contact-form"
-              name="contact-form"
-              action="/"
-              method="POST"
-              data-netlify="true"
-            >
-              <input type="hidden" name="form-name" value="contact-form" />
-              <div className="form-row">
-                <div className="form-column">
-                  <label>
-                    name<span>*</span>
-                  </label>
-                  <input title="name" type="text" name="name" required />
-                </div>
-                <div className="form-column">
-                  <label>
-                    email<span>*</span>
-                  </label>
-                  <input title="email" type="text" name="email" required />
-                </div>
-                <div className="form-column hidden">
-                  <label>
-                    Don’t fill this out if you’re human:{" "}
-                    <input title="text" type="text" name="bot-field" />
-                  </label>
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-column">
-                  <label>
-                    company<span>*</span>
-                  </label>
-                  <input title="company" type="text" name="company" required />
-                </div>
-                <div className="form-column">
-                  <label>
-                    country<span>*</span>
-                  </label>
-                  <input title="country" type="text" name="country" required />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-column">
-                  <label>
-                    current website <span>(optional)</span>
-                  </label>
-                  <input title="website" type="text" name="website" />
-                </div>
-              </div>
-              <div className="form-row">
-                <div className="form-column">
-                  <label>
-                    message<span>*</span>
-                  </label>
-                  <textarea
-                    title="message"
-                    name="message"
-                    rows={5}
-                    required
-                  ></textarea>
-                </div>
-              </div>
-              <div className="form-row justify-end">
-                <button
-                  className="button flex justify-center w-fit mt-5"
-                  //onClick={onSelectItem}
-                  type="submit"
+            <InView triggerOnce threshold={0}>
+              {({ inView, ref, entry }) => (
+                <h2
+                  ref={ref}
+                  className={classNames("opacity-0", { slideInTop: inView })}
                 >
-                  send
-                </button>
-              </div>
-            </form>
+                  <AnimatedTitle
+                    title={
+                      <div className="font-extralight text-center">
+                        <span className="text-accent3 whitespace-nowrap">
+                          Have a{" "}
+                        </span>{" "}
+                        <span className="text-accent2 font-normal whitespace-nowrap">
+                          {" "}
+                          Role
+                        </span>
+                        <span className="text-accent3"> you </span>
+                        <br className="md:hidden" />
+                        <span className="text-accent3"> would</span>{" "}
+                        <br className="hidden md:block" />
+                        <span className="text-accent3">
+                          {" "}
+                          like to discuss?
+                        </span>{" "}
+                        <br className="md:hidden" />
+                        <span className="font-normal"> Reach out, </span>
+                        <span className="text-accent3"> let's talk! </span>
+                      </div>
+                    }
+                  />
+                </h2>
+              )}
+            </InView>
+          </div>
+          <div className="max-w-[800px] w-full flex-[3] mt-[50px] z-30">
+            <InView triggerOnce threshold={0}>
+              {({ inView, ref, entry }) => (
+                <form
+                  ref={ref}
+                  className={classNames(
+                    "section-contact-form opacity-0 w-full",
+                    {
+                      slideInBottom: inView,
+                    }
+                  )}
+                  name="contact-form"
+                  action="/"
+                  method="POST"
+                  data-netlify="true"
+                >
+                  <input type="hidden" name="form-name" value="contact-form" />
+                  <div className="form-row">
+                    <div className="form-column">
+                      <label>
+                        name<span>*</span>
+                      </label>
+                      <input title="name" type="text" name="name" required />
+                    </div>
+                    <div className="form-column">
+                      <label>
+                        email<span>*</span>
+                      </label>
+                      <input title="email" type="text" name="email" required />
+                    </div>
+                    <div className="form-column hidden">
+                      <label>
+                        Don’t fill this out if you’re human:{" "}
+                        <input title="text" type="text" name="bot-field" />
+                      </label>
+                    </div>
+                  </div>
+                  <div className="form-row">
+                    <div className="form-column">
+                      <label>
+                        company<span>*</span>
+                      </label>
+                      <input
+                        title="company"
+                        type="text"
+                        name="company"
+                        required
+                      />
+                    </div>
+                    <div className="form-column">
+                      <label>
+                        country<span>*</span>
+                      </label>
+                      <input
+                        title="country"
+                        type="text"
+                        name="country"
+                        required
+                      />
+                    </div>
+                  </div>
+                  <div className="form-row">
+                    <div className="form-column">
+                      <label>
+                        current website <span>(optional)</span>
+                      </label>
+                      <input title="website" type="text" name="website" />
+                    </div>
+                  </div>
+                  <div className="form-row">
+                    <div className="form-column">
+                      <label>
+                        message<span>*</span>
+                      </label>
+                      <textarea
+                        title="message"
+                        name="message"
+                        rows={5}
+                        required
+                      ></textarea>
+                    </div>
+                  </div>
+                  <div className="form-row justify-end">
+                    <button
+                      className="button flex justify-center w-fit mt-5"
+                      //onClick={onSelectItem}
+                      type="submit"
+                    >
+                      send
+                    </button>
+                  </div>
+                </form>
+              )}
+            </InView>
           </div>
         </section>
       </div>

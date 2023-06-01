@@ -73,7 +73,7 @@
   }
 
   .section-portfolio {
-    margin-top: -150px;
+    margin-top: -100px;
     &:before {
       content: " ";
       position: absolute;
@@ -95,6 +95,18 @@
       background: var(--accent);
       display: inline-block;
       clip-path: url(#section-bottom);
+    }
+  }
+
+  .animated-letter {
+    animation-fill-mode: forwards;
+  }
+
+  .sequence-letters {
+    @for $i from 1 through 15 {
+      > span:nth-child(#{$i}n) {
+        animation-delay: #{($i * 0.05) + 0.1}s;
+      }
     }
   }
 
@@ -133,17 +145,7 @@
   }
 
   .section-contact-form {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-areas:
-      "name"
-      "email"
-      "company"
-      "phone"
-      "message";
-    > p {
-      width: 100%;
-    }
+    z-index: 20;
   }
   .form-row {
     display: flex;
@@ -153,6 +155,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
 
     @apply sm:flex-row;
   }
@@ -233,6 +236,229 @@
     transition: all 0.2s linear;
     &:hover {
       @apply text-whiteColor font-bold;
+    }
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translate3d(-100px, 0, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .slideInLeft {
+    opacity: 0;
+    display: inline-block;
+    animation-name: slideInLeft;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-duration: 0.6s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slideInBottom {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 50px, 0);
+    }
+    50% {
+      opacity: 1;
+      transform: translate3d(0, -10px, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .slideInBottom {
+    opacity: 0;
+    display: inline-block;
+    animation-name: slideInBottom;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes slideInTop {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -50px, 0);
+    }
+    50% {
+      opacity: 1;
+      transform: translate3d(0, 10px, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .slideInTop {
+    opacity: 0;
+    animation-name: slideInTop;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  .fadeIn {
+    opacity: 0;
+    display: inline-block;
+    animation-name: fadeIn;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  @keyframes bounceIn {
+    0% {
+      opacity: 1;
+      transform: scale3d(0.3, 0.3, 0.3);
+    }
+    20% {
+      opacity: 1;
+      transform: scale3d(1.1, 1.1, 1.1);
+    }
+    40% {
+      opacity: 1;
+      transform: scale3d(0.9, 0.9, 0.9);
+    }
+    60% {
+      opacity: 1;
+      transform: scale3d(1.03, 1.03, 1.03);
+    }
+    80% {
+      opacity: 1;
+      transform: scale3d(0.97, 0.97, 0.97);
+    }
+    100% {
+      opacity: 1;
+      transform: scale3d(1, 1, 1);
+    }
+  }
+
+  .bounceIn {
+    opacity: 0;
+    display: inline-block;
+    animation-name: bounceIn;
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+
+  @keyframes bounceInDown {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, -100px, 0);
+    }
+    60% {
+      opacity: 1;
+      transform: translate3d(0, 25px, 0);
+    }
+    75% {
+      opacity: 1;
+      transform: translate3d(0, -10px, 0);
+    }
+    90% {
+      opacity: 1;
+      transform: translate3d(0, 5px, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+    }
+  }
+
+  .bounceInDown {
+    opacity: 0;
+    display: inline-block;
+    animation-name: bounceInDown;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes bounceInUp {
+    0% {
+      opacity: 0;
+      transform: translate3d(0, 100px, 0);
+    }
+    60% {
+      opacity: 1;
+      transform: translate3d(0, -25px, 0);
+    }
+    75% {
+      opacity: 1;
+      transform: translate3d(0, 10px, 0);
+    }
+    90% {
+      opacity: 1;
+      transform: translate3d(0, -5px, 0);
+    }
+    100% {
+      opacity: 1;
+      -webkit-transform: none;
+      -ms-transform: none;
+      transform: none;
+    }
+  }
+
+  .bounceInUp {
+    opacity: 0;
+    display: inline-block;
+    animation-name: bounceInUp;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-duration: 0.75s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes rotateIn {
+    0% {
+      transform-origin: center;
+      transform: rotate3d(0, 0, 1, -200deg);
+      opacity: 0;
+    }
+    100% {
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  .rotateIn {
+    opacity: 0;
+    display: inline-block;
+    animation-name: rotateIn;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-duration: 0.4s;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translate3d(-100px, 0, 0);
+    }
+    100% {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
     }
   }
 }

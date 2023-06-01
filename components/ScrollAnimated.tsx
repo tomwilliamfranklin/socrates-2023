@@ -39,7 +39,7 @@ export default function ScrollAnimated({
     return () => {
       // cleanup code (optional)
     };
-  }, []); // <- empty dependency Array so it doesn't re-run on every render!
+  }, [movementSpeed, offsetAmount]);
 
   return (
     <div
