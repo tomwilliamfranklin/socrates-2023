@@ -150,6 +150,7 @@ export default function Home() {
             <form
               id="contactForm"
               className="section-contact-form"
+              netlify
               // onSubmit={this.onContactSubmit}
             >
               <div className="form-row">
