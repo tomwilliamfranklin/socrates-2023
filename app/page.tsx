@@ -194,7 +194,7 @@ export default function Home() {
                   <label>
                     current website <span>(optional)</span>
                   </label>
-                  <input type="text" name="name" id="name" required />
+                  <input type="text" name="name" id="name" />
                 </div>
               </div>
               <div className="form-row">
@@ -214,6 +214,7 @@ export default function Home() {
                 <button
                   className="send-button flex justify-center w-fit mt-5"
                   //onClick={onSelectItem}
+                  type="submit"
                 >
                   send
                 </button>
