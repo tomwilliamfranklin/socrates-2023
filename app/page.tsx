@@ -160,18 +160,18 @@ export default function Home() {
                   <label>
                     name<span>*</span>
                   </label>
-                  <input type="text" name="name" required />
+                  <input title="name" type="text" name="name" required />
                 </div>
                 <div className="form-column">
                   <label>
                     email<span>*</span>
                   </label>
-                  <input type="text" name="email" required />
+                  <input title="email" type="text" name="email" required />
                 </div>
                 <div className="form-column hidden">
                   <label>
                     Don’t fill this out if you’re human:{" "}
-                    <input type="text" name="bot-field" />
+                    <input title="text" type="text" name="bot-field" />
                   </label>
                 </div>
               </div>
@@ -180,13 +180,13 @@ export default function Home() {
                   <label>
                     company<span>*</span>
                   </label>
-                  <input type="text" name="company" required />
+                  <input title="company" type="text" name="company" required />
                 </div>
                 <div className="form-column">
                   <label>
                     country<span>*</span>
                   </label>
-                  <input type="text" name="country" required />
+                  <input title="country" type="text" name="country" required />
                 </div>
               </div>
               <div className="form-row">
@@ -194,7 +194,7 @@ export default function Home() {
                   <label>
                     current website <span>(optional)</span>
                   </label>
-                  <input type="text" name="website" />
+                  <input title="website" type="text" name="website" />
                 </div>
               </div>
               <div className="form-row">
@@ -202,7 +202,12 @@ export default function Home() {
                   <label>
                     message<span>*</span>
                   </label>
-                  <textarea name="message" rows={5} required></textarea>
+                  <textarea
+                    title="message"
+                    name="message"
+                    rows={5}
+                    required
+                  ></textarea>
                 </div>
               </div>
               <div className="form-row justify-end">
