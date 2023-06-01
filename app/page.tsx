@@ -150,7 +150,9 @@ export default function Home() {
             <form
               id="contactForm"
               className="section-contact-form"
-              netlify
+              method="POST"
+              data-netlify="true"
+              netlify-honeypot="bot-field"
               // onSubmit={this.onContactSubmit}
             >
               <div className="form-row">
@@ -165,6 +167,12 @@ export default function Home() {
                     email<span>*</span>
                   </label>
                   <input type="text" name="name" id="name" required />
+                </div>
+                <div className="form-column hidden">
+                  <label>
+                    Don’t fill this out if you’re human:{" "}
+                    <input name="bot-field" />
+                  </label>
                 </div>
               </div>
               <div className="form-row">
