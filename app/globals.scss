@@ -5,6 +5,8 @@
 :root {
   --primary: #061425;
   --accent: #f4d35e;
+  --accent2: #ef4444;
+  --accent3: #0ea5e9;
   --secondary: #303a44;
   --secondaryAccent: #577399;
   --secondaryLight: #516170;
@@ -22,6 +24,8 @@
   :root {
     --primary: #061425;
     --accent: #f4d35e;
+    --accent2: #ef4444,
+    --accent3: #0ea5e9,
     --secondary: #2b3036;
     --secondaryAccent: #577399;
     --secondaryLight: #516170;
@@ -74,6 +78,7 @@
 
   .section-portfolio {
     margin-top: -100px;
+    background: linear-gradient(var(--accent), var(--accent2));
     &:before {
       content: " ";
       position: absolute;
@@ -92,7 +97,7 @@
       left: 0;
       width: 100%;
       height: 200px;
-      background: var(--accent);
+      background: var(--accent2);
       display: inline-block;
       clip-path: url(#section-bottom);
     }

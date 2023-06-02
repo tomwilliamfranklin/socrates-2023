@@ -25,8 +25,6 @@ export default function ScrollAnimated({
   gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
   
   useEffect(() => {
-    const portfolio = document.getElementById("portfolio");
-
     gsap.fromTo(
       ref.current,
       {
@@ -48,7 +46,7 @@ export default function ScrollAnimated({
   return (
     <div
       style={style}
-      className={classNames(className, " hover:translate-y-50 z-20")}
+      className={className}
       ref={ref}
     >
       {children}
