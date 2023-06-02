@@ -41,22 +41,21 @@ export default function Home() {
   useEffect(() => {
     const preShapes = [];
 
-    for (let i = 0; i < 40; i++) {
+    for (let i = 0; i < 20; i++) {
       const randomType = Math.floor(Math.random() * 9);
 
       preShapes.push(
         <ScrollAnimated
-          offsetAmount={randomWithRange(0, 20)}
-          movementSpeed={randomWithRange(0, 10) / 10}
+          movementSpeed={randomWithRange(1, 7)}
           className={`squares shape-animated stroke-accent${randomWithRange(
             2,
             3
           )} fill-accent${randomWithRange(1, 3)} absolute top-[19vh]`}
           style={{
             // TODO, this is a hack of 0% onwards. We should make a different container for the random shapes. (different component?)
-            top: randomWithRange(0, 100) + "%",
+            top: randomWithRange(0, 200) + "%",
             left: Math.floor(Math.random() * 100) + "vw",
-            opacity: randomWithRange(1, 5) / 10,
+            opacity: randomWithRange(1, 3) / 10,
             width: `${randomWithRange(20, 70)}px`,
           }}
         >
@@ -192,10 +191,10 @@ export default function Home() {
         <section className="section-portfolio relative p-20 w-full flex justify-center items-center bg-accent">
           <Portfolio />
         </section>
-        <section className="relative w-full flex justify-center items-center flex-col p-5 pt-80 mb-[200px]">
+  <InView triggerOnce threshold={0.8}>
+    {({ inView, ref, entry }) => (
+        <section className="relative w-full flex justify-center items-center flex-col p-5 pt-80 mb-[200px] z-30">
           <div className="flex-1 max-w-[1000px] h-full flex flex-col">
-            <InView triggerOnce threshold={0}>
-              {({ inView, ref, entry }) => (
                 <h2
                   ref={ref}
                   className={classNames("opacity-0", { slideInTop: inView })}
@@ -225,12 +224,8 @@ export default function Home() {
                     }
                   />
                 </h2>
-              )}
-            </InView>
           </div>
-          <div className="max-w-[800px] w-full flex-[3] mt-[50px] z-30">
-            <InView triggerOnce threshold={0}>
-              {({ inView, ref, entry }) => (
+          <div className="max-w-[800px] w-full flex-[3] mt-[50px]">
                 <form
                   ref={ref}
                   className={classNames(
@@ -320,10 +315,10 @@ export default function Home() {
                     </button>
                   </div>
                 </form>
-              )}
-            </InView>
           </div>
         </section>
+        )}
+      </InView>
       </div>
       <div className="w-full h-full top-0 absolute left-0 pointer-events-none">
         <div
@@ -333,7 +328,7 @@ export default function Home() {
           //   transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
           // }}
         />
-        <div className="absolute w-full h-full">
+        <div className="fixed w-full h-full">
           {shapes.map((s) => {
             return s;
           })}

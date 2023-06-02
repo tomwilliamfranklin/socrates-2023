@@ -121,7 +121,7 @@
   }
 
   .shape-animated {
-    @apply pointer-events-auto transition-all ease-in-out duration-1000  hover:translate-y-[-10px];
+   // @apply pointer-events-auto transition-all ease-in-out duration-1000  hover:translate-y-[-10px];
   }
 
   .portfolio-item {
