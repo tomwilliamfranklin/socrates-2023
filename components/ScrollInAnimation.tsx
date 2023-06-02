@@ -9,11 +9,13 @@ export default function ScrollInAnimation({
   children,
   className,
   style,
+  triggerID, // like #contact etc. html ID
   goal = 10,
   start = 0,
   movementSpeed = 1, // 0.1 - 1.
 }: {
   children: React.ReactElement[] | React.ReactElement;
+  triggerID: string,
   className?: string;
   style?: any;
   start?: number;
@@ -34,8 +36,6 @@ export default function ScrollInAnimation({
     });
 
   useEffect(() => {
-    const portfolio = document.getElementById("portfolio");
-
     gsap.fromTo(
       ref.current,
       {
@@ -47,7 +47,7 @@ export default function ScrollInAnimation({
         y: () => `${goal * (movementSpeed / 10)}vh`,
         ease: "none",
         scrollTrigger: {
-          trigger: "#contact",
+          trigger: `#${triggerID}`,
           start: "top center",
           end: "center center",
           scrub: true,
@@ -59,7 +59,7 @@ export default function ScrollInAnimation({
   return (
     <div
       style={style}
-      className={classNames(className, " hover:translate-y-50 z-20")}
+      className={classNames(className, "")}
       ref={ref}
     >
       {children}

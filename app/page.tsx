@@ -196,6 +196,7 @@ export default function Home() {
         <section id="contact" className="relative w-full flex justify-center items-center flex-col p-5 pt-80 mb-[200px] z-30">
           <div className="flex-1 max-w-[1000px] h-full flex flex-col">
               <ScrollInAnimation
+                triggerID="contact"
                 movementSpeed={0}
                 start={-10}
                 goal={0}
@@ -231,6 +232,7 @@ export default function Home() {
           </div>
           <div className="max-w-[800px] w-full flex-[3] mt-[50px]">
               <ScrollInAnimation
+                triggerID="contact"
                 movementSpeed={0}
                 start={10}
                 goal={0}
@@ -244,6 +246,7 @@ export default function Home() {
                   action="/"
                   method="POST"
                   data-netlify="true"
+                  onSubmit={() => {  window.alert("Message submitted, thank you!:)")  }}
                 >
                   <input type="hidden" name="form-name" value="contact-form" />
                   <div className="form-row">
@@ -322,8 +325,7 @@ export default function Home() {
                   </div>
                 </form>
 
-              </ScrollInAnimation>
-              
+              </ScrollInAnimation>        
           </div>
         </section>
       </div>
