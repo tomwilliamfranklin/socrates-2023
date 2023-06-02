@@ -79,7 +79,7 @@ export default function PortfolioItem(props: Props) {
                 return (
                   <div
                     key={index}
-                    className="text-md  p-2 rounded-md h-fit whitespace-nowrap border-2 border-accent3"
+                    className="text-md  p-2 rounded-md h-fit whitespace-nowrap bg-accent3 text-whiteColor border-2 border-whiteColor"
                   >
                     {t}
                   </div>

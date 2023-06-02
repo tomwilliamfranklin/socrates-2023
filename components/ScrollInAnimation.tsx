@@ -5,7 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import classNames from "classnames";
 
-export default function ScrollAnimated({
+export default function ScrollInAnimation({
   children,
   className,
   style,
@@ -23,28 +23,39 @@ export default function ScrollAnimated({
 }) {
   const ref = useRef(null);
   gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
-  
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ref.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: true
+        }
+    });
+
   useEffect(() => {
     const portfolio = document.getElementById("portfolio");
 
     gsap.fromTo(
       ref.current,
       {
+        opacity: 0,
         y: () => `${start}vh`,
       },
       {
+        opacity: 1,
         y: () => `${goal * (movementSpeed / 10)}vh`,
         ease: "none",
         scrollTrigger: {
-          start: "top top",
-          end: "bottom top",
+          trigger: "#contact",
+          start: "top center",
+          end: "center center",
           scrub: true,
           invalidateOnRefresh: true, // to make it responsive
         },
       }
     );
   }, []);
-
   return (
     <div
       style={style}

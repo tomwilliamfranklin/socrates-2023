@@ -4,6 +4,7 @@ import AnimatedLetter, { EAnimationType } from "@/components/AnimatedLetter";
 import AnimatedTitle from "@/components/animatedTitle";
 import Portfolio from "@/components/Portfolio";
 import ScrollAnimated from "@/components/ScrollAnimated";
+import ScrollInAnimation from "@/components/ScrollInAnimation";
 import classNames from "classnames";
 import { useEffect, useState } from "react";
 import { InView } from "react-intersection-observer";
@@ -47,6 +48,7 @@ export default function Home() {
       preShapes.push(
         <ScrollAnimated
           movementSpeed={randomWithRange(1, 7)}
+          goal={-150}
           className={`squares shape-animated stroke-accent${randomWithRange(
             2,
             3
@@ -191,14 +193,15 @@ export default function Home() {
         <section className="section-portfolio relative p-20 w-full flex justify-center items-center bg-accent">
           <Portfolio />
         </section>
-  <InView triggerOnce threshold={0.8}>
-    {({ inView, ref, entry }) => (
-        <section className="relative w-full flex justify-center items-center flex-col p-5 pt-80 mb-[200px] z-30">
+        <section id="contact" className="relative w-full flex justify-center items-center flex-col p-5 pt-80 mb-[200px] z-30">
           <div className="flex-1 max-w-[1000px] h-full flex flex-col">
-                <h2
-                  ref={ref}
-                  className={classNames("opacity-0", { slideInTop: inView })}
-                >
+              <ScrollInAnimation
+                movementSpeed={0}
+                start={-10}
+                goal={0}
+                className={`opacity-0`}
+              >
+                <h2>
                   <AnimatedTitle
                     title={
                       <div className="font-extralight text-center">
@@ -224,15 +227,18 @@ export default function Home() {
                     }
                   />
                 </h2>
+            </ScrollInAnimation>    
           </div>
           <div className="max-w-[800px] w-full flex-[3] mt-[50px]">
+              <ScrollInAnimation
+                movementSpeed={0}
+                start={10}
+                goal={0}
+                className={`opacity-0`}
+              >
                 <form
-                  ref={ref}
                   className={classNames(
-                    "section-contact-form opacity-0 w-full",
-                    {
-                      slideInBottom: inView,
-                    }
+                    "section-contact-form w-full",
                   )}
                   name="contact-form"
                   action="/"
@@ -315,10 +321,11 @@ export default function Home() {
                     </button>
                   </div>
                 </form>
+
+              </ScrollInAnimation>
+              
           </div>
         </section>
-        )}
-      </InView>
       </div>
       <div className="w-full h-full top-0 absolute left-0 pointer-events-none">
         <div
