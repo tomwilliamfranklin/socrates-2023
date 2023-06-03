@@ -307,6 +307,7 @@ export default function Home() {
                         message<span>*</span>
                       </label>
                       <textarea
+                        className=" min-h-[150px] max-h-[300px]"
                         title="message"
                         name="message"
                         rows={5}
