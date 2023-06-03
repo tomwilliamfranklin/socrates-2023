@@ -8,6 +8,7 @@ export type PortfolioData = {
   tech: string[];
   link: string;
   image: string;
+  disableImageScroll?: boolean;
 };
 
 export const portfolioData: PortfolioData[] = [
@@ -42,6 +43,7 @@ export const portfolioData: PortfolioData[] = [
     tech: ["React", "SASS"],
     link: "https://www.dotamemeteam.com/",
     image: "dotamemeteam.jpeg",
+    disableImageScroll: true,
   },
 ];
 

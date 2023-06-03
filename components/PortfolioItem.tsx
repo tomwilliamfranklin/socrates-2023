@@ -1,14 +1,12 @@
 import React, { useEffect, useLayoutEffect, useRef } from "react";
 import Image from "next/image";
-export type Props = {
-  name: string;
-  description: string;
-  tech: string[];
-  link: string;
-  image: string;
-};
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import classNames from "classnames";
+import { PortfolioData } from "./Portfolio";
+
+export type Props = PortfolioData & {
+};
 
 export default function PortfolioItem(props: Props) {
   const onSelectItem = () => {
@@ -17,12 +15,7 @@ export default function PortfolioItem(props: Props) {
   const ref = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
 
-  let getRatio = (el: any) =>
-    window.innerHeight / (window.innerHeight + el.offsetHeight);
-
   useEffect(() => {
-    const portfolio = document.getElementById("portfolio");
-
     gsap.fromTo(
       ref.current,
       {
@@ -55,12 +48,12 @@ export default function PortfolioItem(props: Props) {
               <Image
                 alt="portfolio image"
                 onClick={onSelectItem}
-                className="
+                className={classNames(`
                 absolute 
                 top-0  
-                hover:translate-y-[calc(-100%+440px)] transition-all ease-in duration-[5s] 
+                transition-all ease-in duration-[5s] 
                 cursor-pointer min-h-full 
-                object-cover"
+                object-cover`, { "hover:translate-y-[calc(-100%+440px)]": !props.disableImageScroll })}
                 src={"/" + props.image}
                 width={1000}
                 height={1000}
