@@ -8,11 +8,7 @@
   --accent2: #ef4444;
   --accent3: #0ea5e9;
   --secondary: #303a44;
-  --secondaryAccent: #577399;
-  --secondaryLight: #516170;
-  --light: #bdd5ea;
 
-  --primaryDark: #191919;
   --highlight: #e80000;
   --whiteColor: #f7f7ff;
   --blackColor: #000814;
@@ -27,17 +23,17 @@
     --accent2: #ef4444,
     --accent3: #0ea5e9,
     --secondary: #2b3036;
-    --secondaryAccent: #577399;
-    --secondaryLight: #516170;
-    --light: #bdd5ea;
 
-    --primaryDark: #191919;
     --highlight: #e80000;
     --whiteColor: #f7f7ff;
     --blackColor: #000814;
     --greyColor: #c5c5c5;
     --transparent: transparent;
   }
+}
+
+::selection {
+  background: var(--accent);
 }
 
 @layer components {

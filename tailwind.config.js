@@ -14,9 +14,6 @@ module.exports = {
       accent1: "#f4d45e",
       accent2: "#ef4444",
       accent3: "#0ea5e9",
-      secondaryAccent: "#577399",
-      secondaryLight: "#516170",
-      light: "#bdd5ea",
 
       primaryDark: "#191919",
       highlight: "#e80000",
@@ -27,13 +24,6 @@ module.exports = {
       transparent: "transparent",
       boxShadow: "rgba(0,0,0,0.4)",
     },
-    //   extend: {
-    //     backgroundImage: {
-    //       "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-    //       "gradient-conic":
-    //         "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
-    //     },
-    //   },
   },
   plugins: [],
   safelist: [
