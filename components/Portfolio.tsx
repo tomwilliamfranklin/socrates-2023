@@ -22,7 +22,7 @@ export const portfolioData: PortfolioData[] = [
   {
     name: "Grove Group",
     description:
-      "Worked with Grove Group Electrical to produce their primary website for commecial services",
+      "Worked with Grove Group Electrical to produce their primary website for commerical services",
     tech: ["React", "SASS", "DecapCRM"],
     link: "https://edison-18de75.netlify.app/",
     image: "grove-electrical.jpeg",
