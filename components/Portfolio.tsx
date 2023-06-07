@@ -21,6 +21,14 @@ export const portfolioData: PortfolioData[] = [
     image: "f1manager.jpg",
   },
   {
+    name: "Farmiloe Instruments",
+    description:
+      "[IN DEVELOPMENT] Working with Farmiloe Instruments to produce their primary website for commerical services",
+    tech: ["Next.js", "SASS"],
+    link: "https://heisz.netlify.app/",
+    image: "heisz.jpeg",
+  },
+  {
     name: "Grove Group",
     description:
       "Worked with Grove Group Electrical to produce their primary website for commerical services",
