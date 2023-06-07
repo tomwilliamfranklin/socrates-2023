@@ -19,38 +19,40 @@ export default function ScrollAnimated({
   start?: number;
   goal?: number;
   movementSpeed?: number;
-
 }) {
+  let mm = gsap.matchMedia();
   const ref = useRef(null);
   gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
-  
+
   useEffect(() => {
-    gsap.fromTo(
-      ref.current,
-      {
-        y: () => `${start}vh`,
-      },
-      {
-        y: () => `${goal * (movementSpeed / 10)}vh`,
-        ease: "none",
-        scrollTrigger: {
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-          invalidateOnRefresh: true, // to make it responsive
+    mm.add("(min-width: 800px)", () => {
+      gsap.fromTo(
+        ref.current,
+        {
+          y: () => `${start}vh`,
         },
-      }
-    );
+        {
+          y: () => `${goal * (movementSpeed / 10)}vh`,
+          ease: "none",
+          scrollTrigger: {
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+            invalidateOnRefresh: true, // to make it responsive
+          },
+        }
+      );
+
+      return () => {
+        // optional
+        // custom cleanup code here (runs when it STOPS matching)
+      };
+    });
   }, []);
 
   return (
-    <div
-      style={style}
-      className={className}
-      ref={ref}
-    >
+    <div style={style} className={className} ref={ref}>
       {children}
     </div>
   );
 }
-

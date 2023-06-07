@@ -15,55 +15,47 @@ export default function ScrollInAnimation({
   movementSpeed = 1, // 0.1 - 1.
 }: {
   children: React.ReactElement[] | React.ReactElement;
-  triggerID: string,
+  triggerID: string;
   className?: string;
   style?: any;
   start?: number;
   goal?: number;
   movementSpeed?: number;
-
 }) {
   const ref = useRef(null);
   gsap.registerPlugin(ScrollToPlugin, ScrollTrigger);
-
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ref.current,
-            start: "top top",
-            end: "bottom top",
-            scrub: true
-        }
-    });
+  let mm = gsap.matchMedia();
 
   useEffect(() => {
-    gsap.fromTo(
-      ref.current,
-      {
-        opacity: 0,
-        y: () => `${start}vh`,
-      },
-      {
-        opacity: 1,
-        y: () => `${goal * (movementSpeed / 10)}vh`,
-        ease: "none",
-        scrollTrigger: {
-          trigger: `#${triggerID}`,
-          start: "top center",
-          end: "center center",
-          scrub: true,
-          invalidateOnRefresh: true, // to make it responsive
+    mm.add("(min-width: 768px)", () => {
+      gsap.fromTo(
+        ref.current,
+        {
+          opacity: 0,
+          y: () => `${start}vh`,
         },
-      }
-    );
+        {
+          opacity: 1,
+          y: () => `${goal * (movementSpeed / 10)}vh`,
+          ease: "none",
+          scrollTrigger: {
+            trigger: `#${triggerID}`,
+            start: "top center",
+            end: "center center",
+            scrub: true,
+            invalidateOnRefresh: true, // to make it responsive
+          },
+        }
+      );
+    });
   }, []);
   return (
     <div
       style={style}
-      className={classNames(className, "")}
+      className={classNames(className, "opacity-1 md:opacity-0")}
       ref={ref}
     >
       {children}
     </div>
   );
 }
-

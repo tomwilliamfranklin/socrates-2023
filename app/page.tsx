@@ -193,140 +193,140 @@ export default function Home() {
         <section className="section-portfolio relative p-20 w-full flex justify-center items-center bg-accent">
           <Portfolio />
         </section>
-        <section id="contact" className="relative w-full flex justify-center items-center flex-col p-5 pt-80 mb-[200px] z-30">
+        <section
+          id="contact"
+          className="relative w-full flex justify-center items-center flex-col p-5 pt-80 mb-[200px] z-30"
+        >
           <div className="flex-1 max-w-[1000px] h-full flex flex-col">
-              <ScrollInAnimation
-                triggerID="contact"
-                movementSpeed={0}
-                start={-10}
-                goal={0}
-                className={`opacity-0`}
-              >
-                <h2>
-                  <AnimatedTitle
-                    title={
-                      <div className="font-extralight text-center">
-                        <span className="text-accent3 whitespace-nowrap">
-                          Have a{" "}
-                        </span>{" "}
-                        <span className="text-accent2 font-normal whitespace-nowrap">
-                          {" "}
-                          Role
-                        </span>
-                        <span className="text-accent3"> you </span>
-                        <br className="md:hidden" />
-                        <span className="text-accent3"> would</span>{" "}
-                        <br className="hidden md:block" />
-                        <span className="text-accent3">
-                          {" "}
-                          like to discuss?
-                        </span>{" "}
-                        <br className="md:hidden" />
-                        <span className="font-normal"> Reach out, </span>
-                        <span className="text-accent3"> let's talk! </span>
-                      </div>
-                    }
-                  />
-                </h2>
-            </ScrollInAnimation>    
+            <ScrollInAnimation
+              triggerID="contact"
+              movementSpeed={0}
+              start={-10}
+              goal={0}
+            >
+              <h2>
+                <AnimatedTitle
+                  title={
+                    <div className="font-extralight text-center">
+                      <span className="text-accent3 whitespace-nowrap">
+                        Have a{" "}
+                      </span>{" "}
+                      <span className="text-accent2 font-normal whitespace-nowrap">
+                        {" "}
+                        Role
+                      </span>
+                      <span className="text-accent3"> you </span>
+                      <br className="md:hidden" />
+                      <span className="text-accent3"> would</span>{" "}
+                      <br className="hidden md:block" />
+                      <span className="text-accent3">
+                        {" "}
+                        like to discuss?
+                      </span>{" "}
+                      <br className="md:hidden" />
+                      <span className="font-normal"> Reach out, </span>
+                      <span className="text-accent3"> let's talk! </span>
+                    </div>
+                  }
+                />
+              </h2>
+            </ScrollInAnimation>
           </div>
           <div className="max-w-[800px] w-full flex-[3] mt-[50px]">
-              <ScrollInAnimation
-                triggerID="contact"
-                movementSpeed={0}
-                start={10}
-                goal={0}
-                className={`opacity-0`}
+            <ScrollInAnimation
+              triggerID="contact"
+              movementSpeed={0}
+              start={10}
+              goal={0}
+            >
+              <form
+                className={classNames("section-contact-form w-full")}
+                name="contact-form"
+                action="/"
+                method="POST"
+                data-netlify="true"
+                onSubmit={() => {
+                  window.alert("Message submitted, thank you!:)");
+                }}
               >
-                <form
-                  className={classNames(
-                    "section-contact-form w-full",
-                  )}
-                  name="contact-form"
-                  action="/"
-                  method="POST"
-                  data-netlify="true"
-                  onSubmit={() => {  window.alert("Message submitted, thank you!:)")  }}
-                >
-                  <input type="hidden" name="form-name" value="contact-form" />
-                  <div className="form-row">
-                    <div className="form-column">
-                      <label>
-                        name<span>*</span>
-                      </label>
-                      <input title="name" type="text" name="name" required />
-                    </div>
-                    <div className="form-column">
-                      <label>
-                        email<span>*</span>
-                      </label>
-                      <input title="email" type="text" name="email" required />
-                    </div>
-                    <div className="form-column hidden">
-                      <label>
-                        Don’t fill this out if you’re human:{" "}
-                        <input title="text" type="text" name="bot-field" />
-                      </label>
-                    </div>
+                <input type="hidden" name="form-name" value="contact-form" />
+                <div className="form-row">
+                  <div className="form-column">
+                    <label>
+                      name<span>*</span>
+                    </label>
+                    <input title="name" type="text" name="name" required />
                   </div>
-                  <div className="form-row">
-                    <div className="form-column">
-                      <label>
-                        company<span>*</span>
-                      </label>
-                      <input
-                        title="company"
-                        type="text"
-                        name="company"
-                        required
-                      />
-                    </div>
-                    <div className="form-column">
-                      <label>
-                        country<span>*</span>
-                      </label>
-                      <input
-                        title="country"
-                        type="text"
-                        name="country"
-                        required
-                      />
-                    </div>
+                  <div className="form-column">
+                    <label>
+                      email<span>*</span>
+                    </label>
+                    <input title="email" type="text" name="email" required />
                   </div>
-                  <div className="form-row">
-                    <div className="form-column">
-                      <label>
-                        current website <span>(optional)</span>
-                      </label>
-                      <input title="website" type="text" name="website" />
-                    </div>
+                  <div className="form-column hidden">
+                    <label>
+                      Don’t fill this out if you’re human:{" "}
+                      <input title="text" type="text" name="bot-field" />
+                    </label>
                   </div>
-                  <div className="form-row">
-                    <div className="form-column">
-                      <label>
-                        message<span>*</span>
-                      </label>
-                      <textarea
-                        className=" min-h-[150px] max-h-[300px]"
-                        title="message"
-                        name="message"
-                        rows={5}
-                        required
-                      ></textarea>
-                    </div>
+                </div>
+                <div className="form-row">
+                  <div className="form-column">
+                    <label>
+                      company<span>*</span>
+                    </label>
+                    <input
+                      title="company"
+                      type="text"
+                      name="company"
+                      required
+                    />
                   </div>
-                  <div className="form-row justify-end">
-                    <button
-                      className="button flex justify-center w-fit mt-5"
-                      //onClick={onSelectItem}
-                      type="submit"
-                    >
-                      send
-                    </button>
+                  <div className="form-column">
+                    <label>
+                      country<span>*</span>
+                    </label>
+                    <input
+                      title="country"
+                      type="text"
+                      name="country"
+                      required
+                    />
                   </div>
-                </form>
-
-              </ScrollInAnimation>        
+                </div>
+                <div className="form-row">
+                  <div className="form-column">
+                    <label>
+                      current website <span>(optional)</span>
+                    </label>
+                    <input title="website" type="text" name="website" />
+                  </div>
+                </div>
+                <div className="form-row">
+                  <div className="form-column">
+                    <label>
+                      message<span>*</span>
+                    </label>
+                    <textarea
+                      className=" min-h-[150px] max-h-[300px]"
+                      title="message"
+                      name="message"
+                      rows={5}
+                      required
+                    ></textarea>
+                  </div>
+                </div>
+                <div className="form-row justify-end">
+                  <button
+                    className="button flex justify-center w-fit mt-5"
+                    //onClick={onSelectItem}
+                    type="submit"
+                  >
+                    send
+                  </button>
+                </div>
+              </form>
+            </ScrollInAnimation>
           </div>
         </section>
       </div>

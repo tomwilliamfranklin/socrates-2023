@@ -5,8 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import classNames from "classnames";
 import { PortfolioData } from "./Portfolio";
 
-export type Props = PortfolioData & {
-};
+export type Props = PortfolioData & {};
 
 export default function PortfolioItem(props: Props) {
   const onSelectItem = () => {
@@ -14,24 +13,32 @@ export default function PortfolioItem(props: Props) {
   };
   const ref = useRef(null);
   gsap.registerPlugin(ScrollTrigger);
+  let mm = gsap.matchMedia();
 
   useEffect(() => {
-    gsap.fromTo(
-      ref.current,
-      {
-        y: () => `0px`,
-      },
-      {
-        y: () => `150px`,
-        ease: "none",
-        scrollTrigger: {
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-          invalidateOnRefresh: true, // to make it responsive
+    mm.add("(min-width: 800px)", () => {
+      gsap.fromTo(
+        ref.current,
+        {
+          y: () => `0px`,
         },
-      }
-    );
+        {
+          y: () => `150px`,
+          ease: "none",
+          scrollTrigger: {
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+            invalidateOnRefresh: true, // to make it responsive
+          },
+        }
+      );
+
+      return () => {
+        // optional
+        // custom cleanup code here (runs when it STOPS matching)
+      };
+    });
   }, []);
 
   //md:[&>*]:odd:flex-row-reverse
@@ -48,12 +55,18 @@ export default function PortfolioItem(props: Props) {
               <Image
                 alt="portfolio image"
                 onClick={onSelectItem}
-                className={classNames(`
+                className={classNames(
+                  `
                 absolute 
                 top-0  
                 transition-all ease-in duration-[5s] 
                 cursor-pointer min-h-full 
-                object-cover`, { "hover:translate-y-[calc(-100%+440px)]": !props.disableImageScroll })}
+                object-cover`,
+                  {
+                    "hover:translate-y-[calc(-100%+440px)]":
+                      !props.disableImageScroll,
+                  }
+                )}
                 src={"/" + props.image}
                 width={1000}
                 height={1000}
