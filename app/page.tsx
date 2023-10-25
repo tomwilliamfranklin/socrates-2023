@@ -2,6 +2,7 @@
 
 import AnimatedLetter, { EAnimationType } from "@/components/AnimatedLetter";
 import AnimatedTitle from "@/components/animatedTitle";
+import FloatingShape from "@/components/FloatingShape";
 import LinkTree from "@/components/linktree";
 import Portfolio from "@/components/Portfolio";
 import ScrollAnimated from "@/components/ScrollAnimated";
@@ -205,8 +206,9 @@ export default function Home() {
             })}
           </div>
         </div>
-        <section className="section-linktree mt-[-100px] relative pl-20 pr-20 pt-[200px] pb-[400px] md:pb-[600px] w-full flex bg-accent">
+        <section className="section-linktree mt-[-100px] relative pl-20 pr-20 pt-[200px] pb-[200px] md:pb-[500px] w-full flex bg-accent">
           <LinkTree />
+          <FloatingShape></FloatingShape>
         </section>
         <section className="section-portfolio relative p-20 w-full flex justify-center items-center bg-accent">
           <Portfolio />

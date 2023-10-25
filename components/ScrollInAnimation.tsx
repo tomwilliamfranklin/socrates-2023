@@ -36,8 +36,8 @@ export default function ScrollInAnimation({
         },
         {
           opacity: 1,
-          y: () => `${goal * (movementSpeed / 100)}px`,
-          ease: "ease",
+          y: () => `${goal * (movementSpeed / 10)}vh`,
+          ease: "none",
           scrollTrigger: {
             trigger: `#${triggerID}`,
             start: "top center",

@@ -1,4 +1,5 @@
 import React from "react";
+import AnimatedTitle from "./animatedTitle";
 import ScrollAnimated from "./ScrollAnimated";
 import ScrollInAnimation from "./ScrollInAnimation";
 
@@ -22,8 +23,6 @@ export default function LinkTree() {
       id="linkedtree"
       className="w-full flex flex-col justify-center items-center gap-10 "
     >
-      <div className=" w-full h-full absolute repeating-svg"></div>
-
       <ScrollAnimated movementSpeed={15} start={0} goal={-50}>
         <div
           className="portfolio-item relative mt-[-300px] p-2 flex border-none md:border-solid md:p-2 rounded-lg 
@@ -52,32 +51,19 @@ export default function LinkTree() {
           </div>
         </div>
       </ScrollAnimated>
-      <div className=" mt-28 flex flex-col justify-center items-center gap-10">
-        <ScrollInAnimation
-          triggerID="linkedtree"
-          movementSpeed={5}
-          start={-20}
-          goal={0}
-        >
+      <div className="relative z-10 flex flex-col justify-center items-center gap-10">
+        <div className="flex-1 max-w-[1000px] h-full flex flex-col">
           <h3 className=" font-light">
             Where you can{" "}
             <span className=" text-accent3 font-medium">find me</span>
             ...
           </h3>
-        </ScrollInAnimation>
-
+        </div>
         <div className=" flex gap-10">
           {" "}
           {linkTrees.map((l) => {
             return (
-              <ScrollInAnimation
-                key={l.name}
-                className={`h-[150px] w-[150px] rounded-full bg-whiteColor border-accent3 border-4 overflow-hidden z-10`}
-                triggerID="linkedtree"
-                movementSpeed={-100}
-                start={10}
-                goal={0}
-              >
+              <div className="h-[150px] w-[150px] rounded-full bg-whiteColor shadow-xl border-accent3 border-4 overflow-hidden z-10`">
                 <a style={{ fill: l.color }} href={l.url}>
                   <div className=" p-10 w-full h-full ">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -85,11 +71,13 @@ export default function LinkTree() {
                     </svg>
                   </div>
                 </a>
-              </ScrollInAnimation>
+              </div>
             );
           })}
         </div>
       </div>
+
+      <div className=" w-full h-full absolute repeating-svg"></div>
     </div>
   );
 }
