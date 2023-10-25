@@ -18,7 +18,7 @@ export const portfolioData: PortfolioData[] = [
     description: `I am currently working at Frontier, focusing on UI development for an undisclosed project. 
        <br/> 
        <br/> 
-       My role includes setting up the UI codebase, building components, and developing early features. Prototyping ideas within the game's engine.`,
+       In my role, I am part of establishing the UI codebase, constructing components, developing early features, prototyping UI design ideas.`,
     tech: ["UI/UX Development", "Prototyping"],
     link: "https://www.frontier.co.uk/",
     image: "mysterygame3.png",
