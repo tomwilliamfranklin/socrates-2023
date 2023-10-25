@@ -63,7 +63,10 @@ export default function LinkTree() {
           {" "}
           {linkTrees.map((l) => {
             return (
-              <div className=" h-[100px] w-[100px] md:h-[150px] md:w-[150px] rounded-full bg-whiteColor shadow-xl brightness-95 border-accent3 border-4 overflow-hidden z-10 transition-all ease-in hover:scale-105 hover:brightness-100">
+              <div
+                key={l.name}
+                className=" h-[100px] w-[100px] md:h-[150px] md:w-[150px] rounded-full bg-whiteColor shadow-xl brightness-95 border-accent3 border-4 overflow-hidden z-10 transition-all ease-in hover:scale-105 hover:brightness-100"
+              >
                 <a style={{ fill: l.color }} href={l.url}>
                   <div className=" p-5 md:p-10 w-full h-full ">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
