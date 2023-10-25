@@ -205,7 +205,7 @@ export default function Home() {
             })}
           </div>
         </div>
-        <section className="section-linktree mt-[-100px] relative pl-20 pr-20 pt-[200px] pb-[600px] w-full flex bg-accent">
+        <section className="section-linktree mt-[-100px] relative pl-20 pr-20 pt-[200px] pb-[400px] md:pb-[600px] w-full flex bg-accent">
           <LinkTree />
         </section>
         <section className="section-portfolio relative p-20 w-full flex justify-center items-center bg-accent">

@@ -1,5 +1,6 @@
 import React from "react";
 import { InView } from "react-intersection-observer";
+import ScrollAnimated from "./ScrollAnimated";
 import ScrollInAnimation from "./ScrollInAnimation";
 
 export type LinkTree = {
@@ -24,37 +25,39 @@ export default function LinkTree() {
     >
       <div className=" w-full h-full absolute repeating-svg"></div>
 
-      <div
-        className="portfolio-item relative mt-[-300px] p-2 flex border-none md:border-solid md:p-2 rounded-lg 
+      <ScrollAnimated movementSpeed={15} start={0} goal={-50}>
+        <div
+          className="portfolio-item relative mt-[-300px] p-2 flex border-none md:border-solid md:p-2 rounded-lg 
     flex-col w-screen text-primary max-w-[1200px] lg:[&>*]:odd:flex-row-reverse"
-      >
-        <div className="xl:p-20 h-full bg-whiteColorTran w-full flex rounded-lg overflow-hidden custom-shadow flex-col md:flex-row">
-          <p className="text-left mt-5 text-greyColor">
-            I am a{" "}
-            <span className=" font-bold">
-              skilled UI/UX developer and designer
-            </span>{" "}
-            deeply passionate about gaming and creating intuitive, distinctive
-            interfaces.
-            <br /> <br />
-            My expertise lies in developing visually appealing frontend designs,
-            where meticulous attention to detail is a priority. My track record
-            showcases a consistent ability to create beautiful interfaces that
-            captivate users. Being involved in every stage of the creation
-            process.
-            <br /> <br />
-            I am currently seeking my next role in the industry, eager to work
-            on inspiring and exciting projects.
-            <br /> <br />
-            <span className=" text-accent2">• </span>Open to relocation
-          </p>
+        >
+          <div className="p-10 xl:p-20 h-full bg-whiteColorTran w-full flex rounded-lg overflow-hidden custom-shadow flex-col md:flex-row">
+            <p className="text-left mt-5 text-greyColor">
+              I am a{" "}
+              <span className=" font-bold">
+                skilled UI/UX developer and designer
+              </span>{" "}
+              deeply passionate about gaming and creating intuitive, distinctive
+              interfaces.
+              <br /> <br />
+              My expertise lies in developing visually appealing frontend
+              designs, where meticulous attention to detail is a priority. My
+              track record showcases a consistent ability to create beautiful
+              interfaces that captivate users. Being involved in every stage of
+              the creation process.
+              <br /> <br />
+              I am currently seeking my next role in the industry, eager to work
+              on inspiring and exciting projects.
+              <br /> <br />
+              <span className=" text-accent2">• </span>Open to relocation
+            </p>
+          </div>
         </div>
-      </div>
+      </ScrollAnimated>
       <div className=" mt-28 flex flex-col justify-center items-center gap-10">
         <ScrollInAnimation
           triggerID="linkedtree"
-          movementSpeed={-100}
-          start={-10}
+          movementSpeed={5}
+          start={-20}
           goal={0}
         >
           <h3 className=" font-light">
