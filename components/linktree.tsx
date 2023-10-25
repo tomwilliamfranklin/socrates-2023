@@ -51,7 +51,7 @@ export default function LinkTree() {
           </div>
         </div>
       </ScrollAnimated>
-      <div className="relative z-10 flex flex-col justify-center items-center gap-10">
+      <div className="relative z-10 pt-28 pb-28 flex flex-col justify-center items-center gap-10">
         <div className="flex-1 max-w-[1000px] h-full flex flex-col">
           <h3 className=" font-light">
             Where you can{" "}
@@ -63,9 +63,9 @@ export default function LinkTree() {
           {" "}
           {linkTrees.map((l) => {
             return (
-              <div className="h-[150px] w-[150px] rounded-full bg-whiteColor shadow-xl brightness-95 border-accent3 border-4 overflow-hidden z-10 transition-all ease-in hover:scale-105 hover:brightness-100">
+              <div className=" h-[100px] w-[100px] md:h-[150px] md:w-[150px] rounded-full bg-whiteColor shadow-xl brightness-95 border-accent3 border-4 overflow-hidden z-10 transition-all ease-in hover:scale-105 hover:brightness-100">
                 <a style={{ fill: l.color }} href={l.url}>
-                  <div className=" p-10 w-full h-full ">
+                  <div className=" p-5 md:p-10 w-full h-full ">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                       <path d="M19 0H5C2.2 0 0 2.2 0 5v14c0 2.8 2.2 5 5 5h14c2.8 0 5-2.2 5-5V5c0-2.8-2.2-5-5-5zM8 19H5V8h3v11zM6.5 6.7c-1 0-1.8-.8-1.8-1.8s.8-1.8 1.8-1.8S8.2 4 8.2 5s-.7 1.7-1.7 1.7zM20 19h-3v-5.6c0-3.4-4-3.1-4 0V19h-3V8h3v1.8c1.4-2.6 7-2.8 7 2.5V19z" />
                     </svg>

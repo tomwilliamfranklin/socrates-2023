@@ -60,7 +60,7 @@ export default function FloatingShape(props: any) {
       className=" absolute z-0 left-[50px] bottom-[150px] w-full h-10 hidden md:block"
       movementSpeed={10}
       start={0}
-      goal={-30}
+      goal={-20}
     >
       <div
         style={{

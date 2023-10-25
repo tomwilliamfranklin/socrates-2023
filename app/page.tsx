@@ -206,7 +206,7 @@ export default function Home() {
             })}
           </div>
         </div>
-        <section className="section-linktree mt-[-100px] relative pl-20 pr-20 pt-[200px] pb-[200px] md:pb-[500px] w-full flex bg-accent">
+        <section className="section-linktree mt-[-100px] relative pl-20 pr-20 pt-[200px] pb-[300px] md:pb-[450px] w-full flex bg-accent">
           <LinkTree />
           <FloatingShape></FloatingShape>
         </section>
@@ -227,7 +227,7 @@ export default function Home() {
               <h2>
                 <AnimatedTitle
                   title={
-                    <div className="font-extralight text-center">
+                    <div className="font-extralight">
                       <span className="text-accent3 whitespace-nowrap">
                         Have a{" "}
                       </span>{" "}
