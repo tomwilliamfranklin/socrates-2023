@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from "react";
-import Image from "next/image";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import classNames from "classnames";
@@ -52,7 +51,7 @@ export default function PortfolioItem(props: Props) {
         <div className="flex-[1.5] bg-transparent p-5 md:p-10">
           <div className="relative w-full h-full flex justify-center items-cente overflow-hidden rounded-lg custom-shadow">
             <div className="relative w-full min-h-[300px] hover:scale-[1.05] transition-transform duration-[0.8s] ">
-              <Image
+              <img
                 alt="portfolio image"
                 onClick={onSelectItem}
                 className={classNames(

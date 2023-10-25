@@ -1,0 +1,18 @@
+{
+  "folders": [
+    {
+      "path": ".."
+    }
+  ],
+  "settings": {},
+  "extensions": {
+    "recommendations": [
+      "esbenp.prettier-vscode",
+      "formulahendry.auto-rename-tag",
+      "sasa.vscode-sass-format",
+      "syler.sass-indented",
+      "mike-co.import-sorter",
+      "CoenraadS.bracket-pair-colorizer-2"
+    ]
+  }
+}

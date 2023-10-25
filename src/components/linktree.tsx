@@ -1,7 +1,4 @@
-import React from "react";
-import AnimatedTitle from "./animatedTitle";
 import ScrollAnimated from "./ScrollAnimated";
-import ScrollInAnimation from "./ScrollInAnimation";
 
 export type LinkTree = {
   name: string;
@@ -30,10 +27,7 @@ export default function LinkTree() {
         >
           <div className="p-10 xl:p-20 h-full bg-whiteColorTran w-full flex rounded-lg overflow-hidden custom-shadow flex-col md:flex-row">
             <p className="text-left mt-5 text-greyColor">
-              I am a{" "}
-              <span className=" font-bold">
-                skilled UI/UX developer and designer
-              </span>{" "}
+              I am a <span className=" font-bold">skilled UI/UX developer</span>{" "}
               deeply passionate about gaming and creating intuitive, distinctive
               interfaces.
               <br /> <br />
@@ -43,19 +37,47 @@ export default function LinkTree() {
               interfaces that captivate users. Being involved in every stage of
               the creation process.
               <br /> <br />
-              I am currently seeking my next role in the industry, eager to work
-              on inspiring and exciting projects.
+              Recently working on the I am currently seeking my next role in the
+              industry, eager to work on inspiring and exciting projects!
               <br /> <br />
-              <span className=" text-accent2">• </span>Open to relocation
+              <br /> <br />
+              <ul className=" text-left md:flex md:gap-2 md:justify-center md:text-center flex-wrap">
+                <li>
+                  <span className=" text-accent"> • </span>
+                  Component Development
+                </li>
+                <li>
+                  <span className=" text-accent2"> • </span>
+                  UI Prototyping
+                </li>
+                <li>
+                  <span className=" text-accent3"> • </span>
+                  UI Testing and Debugging
+                </li>
+                <li>
+                  <span className=" text-accent4"> • </span>
+                  Mentor
+                </li>
+                <li>
+                  <span className=" text-accent"> • </span>
+                  UI Designer
+                </li>
+                <li>
+                  <span className=" text-accent2"> • </span>
+                  UI / UX Development
+                </li>
+              </ul>
             </p>
           </div>
         </div>
       </ScrollAnimated>
       <div className="relative z-10 pt-28 pb-28 flex flex-col justify-center items-center gap-10">
         <div className="flex-1 max-w-[1000px] h-full flex flex-col">
-          <h3 className=" font-light">
-            Where you can{" "}
-            <span className=" text-accent3 font-medium">find me</span>
+          <h3 className=" font-light text-blackColor">
+            Where <span className=" font-medium text-accent3">you</span> can{" "}
+            <span className=" font-medium text-accent2 font-medium">
+              find me
+            </span>
             ...
           </h3>
         </div>

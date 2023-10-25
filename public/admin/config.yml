@@ -1,0 +1,105 @@
+site_url: https://edison-18de75.netlify.app/
+logo_url: https://edison-18de75.netlify.app/static/media/Grove%20Group%20Logo%20AUG22.e64d19b52e52d7ce9450.png
+backend:
+  name: git-gateway
+  branch: dev
+# used together with `npx netlify-cms-proxy-server`. https://www.netlifycms.org/docs/beta-features/#working-with-a-local-git-repository
+local_backend: true
+media_folder: "public/images"
+# Docs: https://www.netlifycms.org/docs/configuration-options/#collections
+collections:
+  - label: "Site settings"
+    name: "site"
+    files:
+      - label: "Config"
+        name: "config"
+        file: "src/content/site/config.json"
+        format: "json"
+        editor:
+          preview: false
+        fields:
+          - { label: "Logo", name: "logo", widget: "image", required: false }
+      - label: "Contact Details"
+        name: "contactDetails"
+        file: "src/content/site/contactDetails.json"
+        format: "json"
+        editor:
+          preview: false
+        fields:
+          - {
+              label: Phone Number,
+              name: phoneNumber,
+              widget: string,
+              hint: "Phone Number in proper format",
+            }
+          - {
+              label: Address,
+              name: address,
+              widget: string,
+              hint: "This is the address of your company.",
+            }
+          - {
+              label: Email,
+              name: email,
+              widget: string,
+              hint: "This is the email of your company.",
+            }
+          - {
+              label: Founding Date,
+              name: foundingDate,
+              widget: Date,
+              hint: "This is the date your company was first founded.",
+            }
+      - label: "Privacy Policy"
+        name: "privacyPolicy"
+        file: "src/content/pages/privacyPolicy.json"
+        format: "json"
+        editor:
+          preview: true
+        fields:
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - {
+              label: "Body",
+              name: "body",
+              widget: "markdown",
+              sanitize_preview: "true",
+              modes: ["rich_text"],
+            }
+      - label: "Contact Page"
+        name: "contactPage"
+        file: "src/content/pages/contact.json"
+        format: "json"
+        editor:
+          preview: true
+        fields:
+          - { label: "Publish Date", name: "date", widget: "datetime" }
+          - {
+              label: "Body",
+              name: "body",
+              widget: "markdown",
+              sanitize_preview: "true",
+              modes: ["rich_text"],
+            }
+  - name: "socialMedias"
+    label: "Social Medias"
+    label_singular: "Social Media" # Used in the UI, ie: "New Post"
+    folder: "src/content/socialMedias"
+    create: true
+    slug: "{{name}}" # Filename
+    fields:
+      - { label: "Name", name: "name", widget: "string" }
+      - {
+          label: "icon",
+          name: "icon",
+          widget: "image",
+          required: true,
+          hint: "The icon will be set to color white, do not use complex icons. with primary color as background. ",
+        }
+
+      - { label: "url", name: "url", widget: "string" }
+      - {
+          label: "primaryColor",
+          name: "primaryColor",
+          widget: "string",
+          hint: "needs the primary color of the social media. In a HEX value. ",
+        }

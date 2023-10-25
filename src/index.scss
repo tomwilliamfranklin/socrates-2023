@@ -7,7 +7,7 @@
   --accent: #f4d35e;
   --accent2: #ef4444;
   --accent3: #0ea5e9;
-  --accent4: #11DB76;
+  --accent4: #11db76;
   --secondary: #303a44;
 
   --highlight: #e80000;
@@ -21,10 +21,10 @@
   :root {
     --primary: #061425;
     --accent: #f4d35e;
-    --accent2: #ef4444,
-    --accent3: #0ea5e9,
-    --accent4: #11DB76,
-    --secondary: #2b3036,
+    --accent2: #ef4444;
+    --accent3: #0ea5e9;
+    --accent4: #11db76;
+    --secondary: #2b3036;
 
     --highlight: #e80000;
     --whiteColor: #f7f7ff;
@@ -34,11 +34,83 @@
   }
 }
 
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-ExtraLight.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Light.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Regular.ttf");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Poppins";
+  src: url("/fonts/Poppins-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+}
+
 ::selection {
   background: var(--accent);
 }
 
 @layer components {
+  body {
+    @apply font-poppins;
+  }
+
+  h1 {
+    word-break: break-all;
+    @apply text-4xl sm:text-4xl md:text-5xl lg:text-7xl;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h3 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
+  p {
+    @apply text-lg;
+  }
+
+  label {
+    @apply text-xl font-bold;
+  }
+
+  button {
+    @apply text-lg md:text-xl;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    z-index: 30;
+    @apply bg-primary rounded-lg text-accent text-xl p-3;
+  }
+
+  span {
+    white-space: nowrap;
+  }
+
   /* This won't be included in your compiled CSS unless you actually use it */
   .site-core {
     position: relative;
@@ -75,7 +147,7 @@
   }
 
   .section-portfolio {
-    filter: drop-shadow(0 0px 28px rgba(0,0,0,0.25));
+    filter: drop-shadow(0 0px 28px rgba(0, 0, 0, 0.25));
     margin-top: -100px;
     background: linear-gradient(var(--accent), var(--accent2));
     &:before {
@@ -85,7 +157,7 @@
       left: 0;
       width: 100%;
       height: 200px;
-      background:  var(--accent);
+      background: var(--accent);
       display: inline-block;
       clip-path: url(#section-top);
     }
@@ -96,14 +168,14 @@
       left: 0;
       width: 100%;
       height: 200px;
-      background:  var(--accent2);
+      background: var(--accent2);
       display: inline-block;
       clip-path: url(#section-bottom);
     }
   }
 
   .section-linktree {
-    background: linear-gradient(#FBAB5E, var(--accent));
+    background: linear-gradient(#fbab5e, var(--accent));
     &:before {
       content: " ";
       position: absolute;
@@ -111,7 +183,7 @@
       left: 0;
       width: 100%;
       height: 200px;
-      background:  #FBAB5E;
+      background: #fbab5e;
       display: inline-block;
       clip-path: url(#section-top);
     }
@@ -122,12 +194,11 @@
       left: 0;
       width: 100%;
       height: 200px;
-      background:  var(--accent2);
+      background: var(--accent2);
       display: inline-block;
       clip-path: url(#section-bottom);
     }
   }
-
 
   .animated-letter {
     animation-fill-mode: forwards;
@@ -152,7 +223,7 @@
   }
 
   .shape-animated {
-   // @apply pointer-events-auto transition-all ease-in-out duration-1000  hover:translate-y-[-10px];
+    // @apply pointer-events-auto transition-all ease-in-out duration-1000  hover:translate-y-[-10px];
   }
 
   .portfolio-item {
@@ -162,7 +233,7 @@
   }
 
   .noise {
-     background: url("/noise.svg");
+    background: url("/images/noise.svg");
   }
 
   .button {
@@ -230,46 +301,6 @@
     grid-column: 1 / 3;
   }
 
-  h1 {
-    word-break: break-all;
-    @apply text-4xl sm:text-4xl md:text-5xl lg:text-7xl;
-  }
-
-  h2 {
-    @apply text-4xl md:text-5xl;
-  }
-
-  h3 {
-    @apply text-3xl md:text-4xl;
-  }
-
-  h4 {
-    @apply text-xl md:text-2xl;
-  }
-
-  p {
-    @apply text-base;
-  }
-
-  label {
-    @apply text-xl font-bold;
-  }
-
-  button {
-    @apply text-lg md:text-xl;
-  }
-
-  input,
-  textarea {
-    width: 100%;
-    z-index: 30;
-    @apply bg-primary rounded-lg text-accent text-xl p-3;
-  }
-
-  span {
-    white-space: nowrap;
-  }
-
   .send-button {
     @apply text-accent font-bold text-4xl;
     transition: all 0.2s linear;
@@ -295,7 +326,7 @@
     background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='50.41' height='87' patternTransform='scale(2) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 100%, 0)'/><path d='M25.3 87L12.74 65.25m0 14.5h-25.12m75.18 0H37.68M33.5 87l25.28-43.5m-50.23 29l4.19 7.25L16.92 87h-33.48m33.48 0h16.75-8.37zM8.55 72.5L16.92 58m50.06 29h-83.54m79.53-50.75L50.4 14.5M37.85 65.24L50.41 43.5m0 29l12.56-21.75m-50.24-14.5h25.12zM33.66 29l4.2 7.25 4.18 7.25M33.67 58H16.92l-4.18-7.25M-8.2 72.5l20.92-36.25L33.66 0m25.12 72.5H42.04l-4.19-7.26L33.67 58l4.18-7.24 4.19-7.25M33.67 29l8.37-14.5h16.74m0 29H8.38m29.47 7.25H12.74M50.4 43.5L37.85 21.75m-.17 58L25.12 58M12.73 36.25L.18 14.5M0 43.5l-12.55-21.75M24.95 29l12.9-21.75M12.4 21.75L25.2 0M12.56 7.25h-25.12m75.53 0H37.85M58.78 43.5L33.66 0h33.5m-83.9 0h83.89M33.32 29H16.57l-4.18-7.25-4.2-7.25m.18 29H-8.37M-16.74 0h33.48l-4.18 7.25-4.18 7.25H-8.37m8.38 58l12.73-21.75m-25.3 14.5L0 43.5m-8.37-29l21.1 36.25 20.94 36.24M8.37 72.5H-8.36'  stroke-width='1' stroke='hsla(0, 0%, 91%, 0.3)' fill='none'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
   }
 
-   .repeating-svg-centered {
+  .repeating-svg-centered {
     mask-image: linear-gradient(transparent, black, black, transparent);
     opacity: 0.5;
     background-image: url("data:image/svg+xml,<svg id='patternId' width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'><defs><pattern id='a' patternUnits='userSpaceOnUse' width='40' height='40' patternTransform='scale(4) rotate(0)'><rect x='0' y='0' width='100%' height='100%' fill='hsla(0, 0%, 91%, 0)'/><path d='M27.26 5.415c-.55 0-.9.55-.65 1l2.45 4.75c.2.5.85.5 1.15.1l3.15-4.5c.3-.4 0-1.05-.55-1.1zM10.689 8.068c-.406-.051-.822.31-.778.748l.5 5.3c.05.5.6.8 1.05.5l4.55-3.05c.45-.3.4-.95-.05-1.15l-5.1-2.3a.605.605 0 0 0-.172-.048zM2.406 24.584a.635.635 0 0 0-.345.081l-4.75 2.4c-.45.2-.5.85-.1 1.15l4.45 3.15c.4.3 1 0 1.1-.5l.3-5.55c0-.412-.31-.712-.655-.73zm40 0a.635.635 0 0 0-.345.081l-4.75 2.4c-.45.2-.5.85-.1 1.15l4.45 3.15c.4.3 1 0 1.1-.5l.3-5.55c0-.412-.31-.712-.655-.73zm-22.17 3.108a.744.744 0 0 0-.675.723l.4 5.55c.05.5.6.8 1.05.5l4.45-2.95c.45-.25.4-.9-.05-1.15l-4.8-2.6a.702.702 0 0 0-.376-.073z'  stroke-width='1' stroke='none' fill='hsla(0, 0%, 91%, 0.1)'/></pattern></defs><rect width='800%' height='800%' transform='translate(0,0)' fill='url(%23a)'/></svg>");
@@ -307,9 +338,8 @@
     border-style: solid;
     border-width: 100px 0 100px 300px;
     border-color: transparent transparent transparent #000000;
-    filter: drop-shadow(0 0px 12px rgba(0,0,0,0.16));
+    filter: drop-shadow(0 0px 12px rgba(0, 0, 0, 0.16));
   }
-
 
   .slideInLeft {
     opacity: 0;

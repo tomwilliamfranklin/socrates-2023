@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import ScrollAnimated from "./ScrollAnimated";
 
 export default function FloatingShape(props: any) {

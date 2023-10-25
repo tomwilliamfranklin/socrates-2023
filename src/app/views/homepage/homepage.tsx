@@ -1,18 +1,16 @@
-"use client";
-
-import AnimatedLetter, { EAnimationType } from "@/components/AnimatedLetter";
-import AnimatedTitle from "@/components/animatedTitle";
-import FloatingShape from "@/components/FloatingShape";
-import LinkTree from "@/components/linktree";
-import Portfolio from "@/components/Portfolio";
-import ScrollAnimated from "@/components/ScrollAnimated";
-import ScrollInAnimation from "@/components/ScrollInAnimation";
 import classNames from "classnames";
+import AnimatedLetter, { EAnimationType } from "components/AnimatedLetter";
+import AnimatedTitle from "components/animatedTitle";
+import FloatingShape from "components/FloatingShape";
+import LinkTree from "components/linktree";
+import Portfolio from "components/Portfolio";
+import ScrollAnimated from "components/ScrollAnimated";
+import ScrollInAnimation from "components/ScrollInAnimation";
 import { useEffect, useState } from "react";
 import { InView } from "react-intersection-observer";
 
 export default function Home() {
-  const [shapes, setShapes] = useState<React.JSX.Element[]>([]);
+  const [shapes, setShapes] = useState<any[]>([]);
 
   const randomWithRange = (min: number, max: number) => {
     const range = max - min + 1;

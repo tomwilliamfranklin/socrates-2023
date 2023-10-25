@@ -1,5 +1,5 @@
 import classNames from "classnames";
-import React, { Children, Component } from "react";
+import React, { Component } from "react";
 
 export enum EAnimationType {
   bounceIn,
