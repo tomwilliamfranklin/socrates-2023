@@ -49,7 +49,7 @@ export default function PortfolioItem(props: Props) {
     flex-col w-screen text-primary max-w-[1200px] md:h-[500px] md:[&>*]:odd:flex-row-reverse"
     >
       <div className="h-full w-full flex rounded-lg overflow-hidden custom-shadow flex-col md:flex-row">
-        <div className="flex-[3] bg-whiteColorTran p-5 md:p-10">
+        <div className="flex-[1.5] bg-whiteColorTran p-5 md:p-10">
           <div className="relative w-full h-full flex justify-center items-cente overflow-hidden rounded-lg custom-shadow">
             <div className="relative w-full min-h-[300px] hover:scale-[1.05] transition-transform duration-[0.8s] ">
               <Image
@@ -75,12 +75,16 @@ export default function PortfolioItem(props: Props) {
           </div>
         </div>
         <div className="flex-[1.5] bg-whiteColorTran flex flex-col align-center justify-start p-5 pt-0 md:p-10">
-          <div className="h-full flex flex-col flex-1 items-center">
-            <h3 className="text-center font-bold mt-5">{props.name}</h3>
-            <p className="text-center mt-5 text-greyColor">
-              {props.description}
-            </p>
-            <div className="flex justify-center mt-5 flex-wrap gap-5 max-w-[200px] mb-auto">
+          <div className="h-full flex flex-col flex-1 items-start">
+            <h3 className="text-left w-full font-bold">{props.name}</h3>
+            <h4 className="text-left w-full font-regular opacity-30">
+              {props.workplace}
+            </h4>
+            <p
+              className="text-left mt-5 text-greyColor"
+              dangerouslySetInnerHTML={{ __html: props.description }}
+            ></p>
+            <div className="flex justify-start mt-5 flex-wrap gap-5 mb-auto">
               {props.tech.map((t, index) => {
                 return (
                   <div
@@ -93,7 +97,7 @@ export default function PortfolioItem(props: Props) {
               })}
             </div>
             <button
-              className="button flex justify-center w-fit mt-[40px]"
+              className="button flex self-start w-fit mt-5"
               onClick={onSelectItem}
             >
               visit the website

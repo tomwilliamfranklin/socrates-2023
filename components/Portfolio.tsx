@@ -8,48 +8,66 @@ export type PortfolioData = {
   tech: string[];
   link: string;
   image: string;
+  workplace: string;
   disableImageScroll?: boolean;
 };
 
 export const portfolioData: PortfolioData[] = [
   {
+    name: "Unannounced Title",
+    description: `I am currently working at Frontier, focusing on UI development for an undisclosed project. 
+       <br/> 
+       <br/> 
+       My role includes setting up the UI codebase, building components, and developing early features. Prototyping ideas within the game's engine.`,
+    tech: ["UI/UX Development", "Prototyping"],
+    link: "https://www.frontier.co.uk/",
+    image: "mysterygame3.png",
+    workplace: "Frontier Developments",
+    disableImageScroll: true,
+  },
+  {
     name: "F1 Manager UI",
     description:
-      "As part of the Frontier UI team, I contributed to the development and implementation of the UI for F1 Manager 2022",
-    tech: ["Coherent Gameface", "SASS", "UE4"],
+      "I was a part of the UI development since the very early stages, with responsiblity over multiple large-scale UI features, and the UI localization.",
+    tech: ["UI/UX Development", "Coherent Gameface", "SASS", "UE4"],
     link: "https://www.f1manager.com/",
+    workplace: "Frontier Developments",
     image: "f1manager.jpg",
   },
   {
     name: "Farmiloe Instruments",
     description:
-      "[IN DEVELOPMENT] Working with Farmiloe Instruments to produce their primary website for commerical services",
-    tech: ["Next.js", "SASS"],
+      "Working with Farmiloe Instruments to produce their primary website for commerical services. With CRM for easy data entry. <br/> <br/> Currently in the process of data entry by their team.",
+    tech: ["React", "SASS", "UI Design", "DecapCRM"],
     link: "https://heisz.netlify.app/",
+    workplace: "Independent Project",
     image: "heisz.jpeg",
   },
   {
     name: "Grove Group",
     description:
-      "Worked with Grove Group Electrical to produce their primary website for commerical services",
-    tech: ["React", "SASS", "DecapCRM"],
+      "Worked with Grove Group Electrical to produce their primary website for commerical services. With CRM for easy data entry by their team. <br/> <br/> Currently in the process of data entry by their team.",
+    tech: ["React", "SASS", "UI Design", "DecapCRM"],
     link: "https://edison-18de75.netlify.app/",
+    workplace: "Independent Project",
     image: "grove-electrical.jpeg",
   },
   {
     name: "101 Engineering",
     description:
-      "Mock website for a generic engineering company. Professional design with a scalable layout for future work",
+      "Mock website demonstrating capabilities in React, for a generic engineering company. <br/> <br/> Professional design with a scalable layout for future work.",
     tech: ["React", "SASS"],
     link: "https://leonardo-d4633.web.app/",
+    workplace: "Personal",
     image: "robot101engineering.jpeg",
   },
   {
     name: "Dota Meme Team",
     description:
-      "Fan website for video game Dota 2. Generates different team ideas to play with friends",
+      "Fan website for video game Dota 2. Generates different team ideas to play with friends. <br/> <br/> Utilizes Dota 2's extensive online image hosting to generate pre-defined team compositions.",
     tech: ["React", "SASS"],
     link: "https://www.dotamemeteam.com/",
+    workplace: "Personal",
     image: "dotamemeteam.jpeg",
     disableImageScroll: true,
   },

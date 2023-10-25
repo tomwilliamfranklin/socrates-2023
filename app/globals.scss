@@ -7,6 +7,7 @@
   --accent: #f4d35e;
   --accent2: #ef4444;
   --accent3: #0ea5e9;
+  --accent4: "#accent4";
   --secondary: #303a44;
 
   --highlight: #e80000;
@@ -22,6 +23,7 @@
     --accent: #f4d35e;
     --accent2: #ef4444,
     --accent3: #0ea5e9,
+    --accent4: "#accent4";
     --secondary: #2b3036;
 
     --highlight: #e80000;
@@ -138,7 +140,7 @@
 
   .button {
     border: 2px solid;
-    @apply custom-shadow text-accent2 font-bold border-accent2;
+    @apply custom-shadow text-accent2 font-bold border-accent2 rounded-md;
     padding: 15px;
     transition: all 0.2s linear;
     &:hover {
@@ -212,6 +214,10 @@
 
   h3 {
     @apply text-xl md:text-4xl;
+  }
+
+  h4 {
+    @apply text-xl md:text-2xl;
   }
 
   p {
