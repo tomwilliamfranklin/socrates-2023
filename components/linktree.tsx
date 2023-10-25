@@ -1,5 +1,4 @@
 import React from "react";
-import { InView } from "react-intersection-observer";
 import ScrollAnimated from "./ScrollAnimated";
 import ScrollInAnimation from "./ScrollInAnimation";
 
@@ -72,6 +71,7 @@ export default function LinkTree() {
           {linkTrees.map((l) => {
             return (
               <ScrollInAnimation
+                key={l.name}
                 className={`h-[150px] w-[150px] rounded-full bg-whiteColor border-accent3 border-4 overflow-hidden z-10`}
                 triggerID="linkedtree"
                 movementSpeed={-100}
