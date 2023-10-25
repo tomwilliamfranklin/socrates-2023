@@ -37,8 +37,8 @@ export default function LinkTree() {
               interfaces that captivate users. Being involved in every stage of
               the creation process.
               <br /> <br />
-              Recently working on the I am currently seeking my next role in the
-              industry, eager to work on inspiring and exciting projects!
+              I am currently seeking my next role in the industry, eager to work
+              on inspiring and exciting projects!
               <br /> <br />
               <br /> <br />
               <ul className=" text-left md:flex md:gap-2 md:justify-center md:text-center flex-wrap">
@@ -76,9 +76,8 @@ export default function LinkTree() {
           <h3 className=" font-light text-blackColor">
             Where <span className=" font-medium text-accent3">you</span> can{" "}
             <span className=" font-medium text-accent2 font-medium">
-              find me
+              find me...
             </span>
-            ...
           </h3>
         </div>
         <div className=" flex gap-10">
