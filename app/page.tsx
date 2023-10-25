@@ -2,6 +2,7 @@
 
 import AnimatedLetter, { EAnimationType } from "@/components/AnimatedLetter";
 import AnimatedTitle from "@/components/animatedTitle";
+import LinkTree from "@/components/linktree";
 import Portfolio from "@/components/Portfolio";
 import ScrollAnimated from "@/components/ScrollAnimated";
 import ScrollInAnimation from "@/components/ScrollInAnimation";
@@ -190,6 +191,23 @@ export default function Home() {
             ></path>
           </clipPath>
         </svg>
+        <div className="w-full h-full top-0 absolute left-0 pointer-events-none">
+          <div
+            className="site-grid fixed"
+            //ref={dotGridRef}
+            // style={{
+            //   transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
+            // }}
+          />
+          <div className="fixed w-full h-full">
+            {shapes.map((s) => {
+              return s;
+            })}
+          </div>
+        </div>
+        <section className="section-linktree mt-[-100px] relative pl-20 pr-20 pt-[200px] pb-[600px] w-full flex bg-accent">
+          <LinkTree />
+        </section>
         <section className="section-portfolio relative p-20 w-full flex justify-center items-center bg-accent">
           <Portfolio />
         </section>
@@ -329,20 +347,6 @@ export default function Home() {
             </ScrollInAnimation>
           </div>
         </section>
-      </div>
-      <div className="w-full h-full top-0 absolute left-0 pointer-events-none">
-        <div
-          className="site-grid fixed"
-          //ref={dotGridRef}
-          // style={{
-          //   transform: `translate(${mousePosition.x}px, ${mousePosition.y}px)`,
-          // }}
-        />
-        <div className="fixed w-full h-full">
-          {shapes.map((s) => {
-            return s;
-          })}
-        </div>
       </div>
     </div>
   );

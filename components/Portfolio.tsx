@@ -1,7 +1,6 @@
 import React from "react";
 import PortfolioItem from "./PortfolioItem";
 
-// TODO add CRM
 export type PortfolioData = {
   name: string;
   description: string;
@@ -79,6 +78,8 @@ export default function Portfolio() {
       id="portfolio"
       className=" w-full h-full flex flex-col justify-start items-center space-y-10 md:space-y-20 mt-[-170px]"
     >
+      <div className=" w-full h-full absolute repeating-svg-centered"></div>
+
       {portfolioData.map((p, index) => {
         return <PortfolioItem key={index} {...p} />;
       })}

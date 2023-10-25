@@ -45,11 +45,11 @@ export default function PortfolioItem(props: Props) {
   return (
     <div
       ref={ref}
-      className="portfolio-item relative p-2 flex border-none md:border-solid md:p-2 z-30 rounded-lg 
-    flex-col w-screen text-primary max-w-[1200px] lg:h-[500px] lg:[&>*]:odd:flex-row-reverse"
+      className="portfolio-item relative p-2 flex border-none md:border-solid md:p-2 rounded-lg 
+    flex-col w-screen text-primary max-w-[1200px] lg:h-[600px] lg:[&>*]:odd:flex-row-reverse"
     >
-      <div className="h-full w-full flex rounded-lg overflow-hidden custom-shadow flex-col md:flex-row">
-        <div className="flex-[1.5] bg-whiteColorTran p-5 md:p-10">
+      <div className="xl:p-10 h-full bg-whiteColorTran w-full flex rounded-lg overflow-hidden custom-shadow flex-col md:flex-row">
+        <div className="flex-[1.5] bg-transparent p-5 md:p-10">
           <div className="relative w-full h-full flex justify-center items-cente overflow-hidden rounded-lg custom-shadow">
             <div className="relative w-full min-h-[300px] hover:scale-[1.05] transition-transform duration-[0.8s] ">
               <Image
@@ -74,7 +74,7 @@ export default function PortfolioItem(props: Props) {
             </div>
           </div>
         </div>
-        <div className="flex-[1.5] bg-whiteColorTran flex flex-col align-center justify-start p-5 pt-0 md:p-10">
+        <div className="flex-[1.5] flex flex-col align-center justify-start p-5 pt-0 md:p-10">
           <div className="h-full flex flex-col flex-1 items-start">
             <h3 className="text-left w-full font-bold">{props.name}</h3>
             <h4 className="text-left w-full font-regular opacity-30">
