@@ -23,7 +23,7 @@ export default function PortfolioItem(props: Props) {
           y: () => `0px`,
         },
         {
-          y: () => `150px`,
+          y: () => `-500px`,
           ease: "none",
           scrollTrigger: {
             start: "top top",
@@ -46,7 +46,7 @@ export default function PortfolioItem(props: Props) {
     <div
       ref={ref}
       className="portfolio-item relative p-2 flex border-none md:border-solid md:p-2 z-30 rounded-lg 
-    flex-col w-screen text-primary max-w-[1200px] md:h-[500px] md:[&>*]:odd:flex-row-reverse"
+    flex-col w-screen text-primary max-w-[1200px] lg:h-[500px] lg:[&>*]:odd:flex-row-reverse"
     >
       <div className="h-full w-full flex rounded-lg overflow-hidden custom-shadow flex-col md:flex-row">
         <div className="flex-[1.5] bg-whiteColorTran p-5 md:p-10">
