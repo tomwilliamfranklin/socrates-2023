@@ -23,48 +23,66 @@ export default function LinkTree() {
       <ScrollAnimated movementSpeed={15} start={0} goal={-50}>
         <div
           className="portfolio-item relative mt-[-300px] p-2 flex border-none md:border-solid md:p-2 rounded-lg 
-    flex-col w-screen text-primary max-w-[1200px] lg:[&>*]:odd:flex-row-reverse"
+    flex-col w-screen text-primary max-w-[1200px] "
         >
-          <div className="p-10 xl:p-20 h-full bg-whiteColorTran w-full flex rounded-lg overflow-hidden custom-shadow flex-col md:flex-row">
-            <p className="text-left mt-5 text-greyColor">
-              I am a <span className=" font-bold">skilled UI/UX developer</span>{" "}
-              deeply passionate about gaming and creating intuitive, distinctive
-              interfaces.
-              <br /> <br />
-              My expertise lies in developing visually appealing frontend
-              designs, where meticulous attention to detail is a priority. My
-              track record showcases a consistent ability to create beautiful
-              interfaces that captivate users. Being involved in every stage of
-              the creation process.
-              <br /> <br />
-              I am currently seeking my next role in the industry, eager to work
-              on inspiring and exciting projects!
-              <br /> <br />
-              <br /> <br />
-              <ul className=" text-left md:flex md:gap-2 md:justify-center md:text-center flex-wrap">
+          <div className="p-10 xl:p-20 h-full gap-10 xxs:gap-20 bg-whiteColorTran w-full flex flex-col rounded-lg overflow-hidden custom-shadow ">
+            <div className=" flex gap-2 xxs:gap-20 flex-col xxs:flex-row flex-wrap sm:pl-10 sm:pr-10">
+              <div className=" flex-[1] min-h-[300px] xxxs:min-w-[300px] flex flex-col justify-center items-center">
+                <img
+                  className=" h-[250px] w-[250px]  md:h-[300px] md:w-[300px] bg-accent rounded-full overflow-hidden object-cover"
+                  alt=" a picture of me, tom franklin"
+                  src={"/me.jpg"}
+                  width={1000}
+                  height={1000}
+                />
+              </div>
+              <p className="flex-[2] text-left mt-5 text-greyColor md:min-w-[400px]">
+                I am a{" "}
+                <span className=" font-bold"> passionate UI/UX Developer</span>{" "}
+                with a robust background in design and development, with a keen
+                eye for creating intuitive, visually striking interfaces, driven
+                by a deep passion for the video game industry.
+                <br /> <br />
+                With a rich background in Frontend and UI/UX development, I
+                bring a versatile skillset that combines technical knowledge
+                with creative capabilities. I have a proven track record of
+                guiding applications from their initial stages, laying down the
+                essential groundwork for projects, and meticulously developing
+                intricate Frontend components.
+                <br /> <br />
+                My experience spans a wide array of applications, including
+                <span className=" font-bold"> video game UI</span>,{" "}
+                <span className=" font-bold"> websites</span>,{" "}
+                <span className=" font-bold"> mobile apps</span>, and{" "}
+                <span className=" font-bold"> software applications</span>.
+              </p>
+            </div>
+            <p>
+              <ul className=" text-left xxs:flex xxs:gap-2 xxs:justify-center xxs:text-center flex-wrap">
                 <li>
-                  <span className=" text-accent"> • </span>
+                  <span className=" text-accent4"> • </span>
                   Component Development
                 </li>
                 <li>
                   <span className=" text-accent2"> • </span>
-                  UI Prototyping
+                  UI / UX Development
                 </li>
                 <li>
                   <span className=" text-accent3"> • </span>
-                  UI Testing and Debugging
+                  UI Prototyping
                 </li>
+
                 <li>
                   <span className=" text-accent4"> • </span>
                   Mentor
                 </li>
                 <li>
-                  <span className=" text-accent"> • </span>
+                  <span className=" text-accent3"> • </span>
                   UI Designer
                 </li>
                 <li>
                   <span className=" text-accent2"> • </span>
-                  UI / UX Development
+                  UI Testing and Debugging
                 </li>
               </ul>
             </p>

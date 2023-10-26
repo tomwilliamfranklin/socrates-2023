@@ -27,6 +27,15 @@ module.exports = {
       transparent: "transparent",
       boxShadow: "rgba(0,0,0,0.4)",
     },
+    screens: {
+      xxxs: "450px", // Iphone SE...
+      xxs: "500px",
+      sm: "640px",
+      md: "768px",
+      lg: "1025px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
   },
   plugins: [],
   safelist: [
