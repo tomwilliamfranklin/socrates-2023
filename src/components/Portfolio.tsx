@@ -32,15 +32,15 @@ export const portfolioData: PortfolioData[] = [
     workplace: "Frontier Developments",
     image: "f1manager.jpg",
   },
-  {
-    name: "Farmiloe Instruments",
-    description:
-      "Working with Farmiloe Instruments to produce their primary website for commerical services. With CRM for easy data entry. <br/> <br/> Currently in the process of data entry by their team.",
-    tech: ["React", "SASS", "UI Design", "DecapCRM"],
-    link: "https://heisz.netlify.app/",
-    workplace: "Independent Project",
-    image: "heisz.jpeg",
-  },
+  // {
+  //   name: "Farmiloe Instruments",
+  //   description:
+  //     "Working with Farmiloe Instruments to produce their primary website for commerical services. With CRM for easy data entry. <br/> <br/> Currently in the process of data entry by their team.",
+  //   tech: ["React", "SASS", "UI Design", "DecapCRM"],
+  //   link: "https://heisz.netlify.app/",
+  //   workplace: "Independent Project",
+  //   image: "heisz.jpeg",
+  // },
   {
     name: "Grove Group",
     description:
