@@ -89,7 +89,7 @@ export const portfolioData: PortfolioData[] = [
   {
     name: "Portfolio Website",
     description:
-      "Website was designed and built by scatch, in React and the Adobe Creative Suite. ",
+      "Website was designed and built from scatch, in React and the Adobe Creative Suite. ",
     tech: [
       "React",
       "SASS",
