@@ -16,6 +16,7 @@ export type PortfolioData = {
   disableImageScroll?: boolean;
   genre?: Genre;
   didDesign?: boolean;
+  didSupportiveDesign?: boolean;
   didProgramming?: boolean;
 };
 
@@ -26,20 +27,37 @@ export const portfolioData: PortfolioData[] = [
        <br/> 
        <br/> 
        In my role, I am part of establishing the UI codebase, constructing components, developing early features, prototyping UI design ideas.`,
-    tech: ["UI/UX Development", "Prototyping"],
+    tech: [
+      "UI/UX Development",
+      "Prototyping",
+      "TypeScript",
+      "Optimization",
+      "Illustrator",
+      "Adobe XD",
+    ],
     link: "https://www.frontier.co.uk/",
     image: "mysterygame3.png",
     workplace: "Frontier Developments",
     disableImageScroll: true,
     didProgramming: true,
-    didDesign: true,
+    didSupportiveDesign: true,
     genre: Genre.Gaming,
   },
   {
     name: "F1 Manager UI",
     description:
       "I was a part of the UI development since the very early stages, with responsiblity over multiple large-scale UI features, and the UI localization.",
-    tech: ["UI/UX Development", "Coherent Gameface", "SASS", "UE4"],
+    tech: [
+      "UI/UX Development",
+      "Coherent Gameface",
+      "TypeScript",
+      "UE4",
+      "Optimization",
+      "Mentoring",
+      "Photoshop",
+      "Illustrator",
+      "Adobe XD",
+    ],
     link: "https://www.f1manager.com/",
     workplace: "Frontier Developments",
     image: "f1manager.jpg",
@@ -50,7 +68,7 @@ export const portfolioData: PortfolioData[] = [
     name: "Inventory UI Tech Demo",
     description:
       "An experiment for creating a inventory system in Preact, with code emulating the supported features of Coherent Gameface. ",
-    tech: ["Preact", "UI/UX Development"],
+    tech: ["Preact", "TypeScript", "UI/UX Development", "Photoshop"],
     link: "https://main--keen-basbousa-602f52.netlify.app/",
     workplace: "Personal",
     image: "inventoryprototype.png",
@@ -69,10 +87,29 @@ export const portfolioData: PortfolioData[] = [
   //   image: "heisz.jpeg",
   // },
   {
+    name: "Portfolio Website",
+    description:
+      "Website was designed and built by scatch, in React and the Adobe Creative Suite. ",
+    tech: [
+      "React",
+      "SASS",
+      "Design Exploration",
+      "Color theory",
+      "Photoshop",
+      "Illustrator",
+      "Adobe XD",
+    ],
+    link: "www.tomfranklin.dev",
+    workplace: "Personal",
+    image: "robot101engineering.jpeg",
+    genre: Genre.Website,
+    didProgramming: true,
+  },
+  {
     name: "Grove Group",
     description:
       "Worked with Grove Group Electrical to produce their primary website for commerical services. With CRM for easy data entry by their team. <br/> <br/> Currently in the process of data entry by their team.",
-    tech: ["React", "SASS", "UI Design", "DecapCRM"],
+    tech: ["React", "SASS", "Design Exploration", "Serverless CMS"],
     link: "https://edison-18de75.netlify.app/",
     workplace: "Independent Project",
     image: "grove-electrical.jpeg",
@@ -81,14 +118,15 @@ export const portfolioData: PortfolioData[] = [
     genre: Genre.Website,
   },
   {
-    name: "101 Engineering",
+    name: "Website Prototype",
     description:
       "Mock website demonstrating capabilities in React, for a generic engineering company. <br/> <br/> Professional design with a scalable layout for future work.",
-    tech: ["React", "SASS"],
+    tech: ["React", "SASS", "Design Exploration"],
     link: "https://leonardo-d4633.web.app/",
     workplace: "Personal",
     image: "robot101engineering.jpeg",
     genre: Genre.Website,
+    didProgramming: true,
   },
   {
     name: "Dota Meme Team",
@@ -100,6 +138,7 @@ export const portfolioData: PortfolioData[] = [
     image: "dotamemeteam.jpeg",
     disableImageScroll: true,
     genre: Genre.Website,
+    didProgramming: true,
   },
 ];
 

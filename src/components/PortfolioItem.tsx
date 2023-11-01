@@ -45,7 +45,7 @@ export default function PortfolioItem(props: Props) {
     <div
       ref={ref}
       className="relative flex border-none md:border-solid md:p-2 
-    flex-col w-screen text-primary max-w-[1200px] lg:h-[600px] lg:[&>.portfolio-item>*]:odd:flex-row-reverse"
+    flex-col w-screen text-primary max-w-[1200px] lg:min-h-[600px] lg:[&>.portfolio-item>*]:odd:flex-row-reverse"
     >
       <div className=" relative left-2 pb-2 flex flex-wrap gap-5">
         {props.genre === Genre.Gaming && (
@@ -66,6 +66,12 @@ export default function PortfolioItem(props: Props) {
         {props.didDesign && (
           <div className=" bg-secondary text-whiteColor p-5 pt-2 pb-2 rounded-md border-l-8 border-l-accent2">
             Design
+          </div>
+        )}
+
+        {props.didSupportiveDesign && (
+          <div className=" bg-secondary text-whiteColor p-5 pt-2 pb-2 rounded-md border-l-8 border-l-accent2">
+            Design (Supportive)
           </div>
         )}
       </div>
