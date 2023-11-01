@@ -101,7 +101,7 @@ export const portfolioData: PortfolioData[] = [
     ],
     link: "www.tomfranklin.dev",
     workplace: "Personal",
-    image: "robot101engineering.jpeg",
+    image: "portfoliosite.jpeg",
     genre: Genre.Website,
     didProgramming: true,
   },
