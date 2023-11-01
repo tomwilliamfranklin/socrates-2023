@@ -1,5 +1,11 @@
 import PortfolioItem from "./PortfolioItem";
 
+export enum Genre {
+  Website,
+  Gaming,
+  UIDesign,
+}
+
 export type PortfolioData = {
   name: string;
   description: string;
@@ -8,11 +14,14 @@ export type PortfolioData = {
   image: string;
   workplace: string;
   disableImageScroll?: boolean;
+  genre?: Genre;
+  didDesign?: boolean;
+  didProgramming?: boolean;
 };
 
 export const portfolioData: PortfolioData[] = [
   {
-    name: "Unannounced Title",
+    name: "Unannounced Title UI",
     description: `I am currently working at Frontier, focusing on UI development for an undisclosed project. 
        <br/> 
        <br/> 
@@ -22,6 +31,9 @@ export const portfolioData: PortfolioData[] = [
     image: "mysterygame3.png",
     workplace: "Frontier Developments",
     disableImageScroll: true,
+    didProgramming: true,
+    didDesign: true,
+    genre: Genre.Gaming,
   },
   {
     name: "F1 Manager UI",
@@ -31,6 +43,21 @@ export const portfolioData: PortfolioData[] = [
     link: "https://www.f1manager.com/",
     workplace: "Frontier Developments",
     image: "f1manager.jpg",
+    didProgramming: true,
+    genre: Genre.Gaming,
+  },
+  {
+    name: "Inventory UI Tech Demo",
+    description:
+      "An experiment for creating a inventory system in Preact, with code emulating the supported features of Coherent Gameface. ",
+    tech: ["Preact", "UI/UX Development"],
+    link: "https://main--keen-basbousa-602f52.netlify.app/",
+    workplace: "Personal",
+    image: "inventoryprototype.png",
+    disableImageScroll: true,
+    didProgramming: true,
+    didDesign: true,
+    genre: Genre.Gaming,
   },
   // {
   //   name: "Farmiloe Instruments",
@@ -49,6 +76,9 @@ export const portfolioData: PortfolioData[] = [
     link: "https://edison-18de75.netlify.app/",
     workplace: "Independent Project",
     image: "grove-electrical.jpeg",
+    didDesign: true,
+    didProgramming: true,
+    genre: Genre.Website,
   },
   {
     name: "101 Engineering",
@@ -58,6 +88,7 @@ export const portfolioData: PortfolioData[] = [
     link: "https://leonardo-d4633.web.app/",
     workplace: "Personal",
     image: "robot101engineering.jpeg",
+    genre: Genre.Website,
   },
   {
     name: "Dota Meme Team",
@@ -68,6 +99,7 @@ export const portfolioData: PortfolioData[] = [
     workplace: "Personal",
     image: "dotamemeteam.jpeg",
     disableImageScroll: true,
+    genre: Genre.Website,
   },
 ];
 
@@ -75,7 +107,7 @@ export default function Portfolio() {
   return (
     <div
       id="portfolio"
-      className=" w-full h-full flex flex-col justify-start items-center space-y-10 md:space-y-20 mt-[-170px]"
+      className=" w-full h-full flex flex-col justify-start items-center space-y-20 mt-[-170px]"
     >
       <div className=" w-full h-full absolute repeating-svg-centered">
         <svg
@@ -116,9 +148,13 @@ export default function Portfolio() {
         </svg>
       </div>
 
-      {portfolioData.map((p, index) => {
-        return <PortfolioItem key={index} {...p} />;
-      })}
+      {portfolioData
+        // .filter((p) => {
+        //   return p.genre != Genre.Website;
+        // })
+        .map((p, index) => {
+          return <PortfolioItem key={index} {...p} />;
+        })}
     </div>
   );
 }
