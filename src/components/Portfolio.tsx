@@ -103,6 +103,7 @@ export const portfolioData: PortfolioData[] = [
     workplace: "Personal",
     image: "portfoliosite.jpeg",
     genre: Genre.Website,
+    didDesign: true,
     didProgramming: true,
   },
   {
