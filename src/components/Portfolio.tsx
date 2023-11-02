@@ -87,7 +87,7 @@ export const portfolioData: PortfolioData[] = [
   {
     name: "Portfolio Website",
     description:
-      "Website was designed and built from scatch, in React and the Adobe Creative Suite. ",
+      "Website was designed and built from the ground up, in React and the Adobe Creative Suite. ",
     tech: [
       "React",
       "SASS",
@@ -105,7 +105,7 @@ export const portfolioData: PortfolioData[] = [
     didProgramming: true,
   },
   {
-    name: "Grove Group",
+    name: "Grove Group Website",
     description:
       "Worked with Grove Group Electrical to produce their primary website for commerical services. With CMS for easy data entry by their team. <br/> <br/> Currently in the process of data entry by their team.",
     tech: ["React", "SASS", "Design Exploration", "Serverless CMS"],
