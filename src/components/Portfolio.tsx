@@ -66,7 +66,7 @@ export const portfolioData: PortfolioData[] = [
     name: "Inventory UI Tech Demo",
     description:
       "An experiment for creating a inventory system in Preact, with code emulating the supported features of Coherent Gameface. ",
-    tech: ["Preact", "TypeScript", "Photoshop"],
+    tech: ["Preact", "TypeScript", "Photoshop", "Illustrator"],
     link: "https://main--keen-basbousa-602f52.netlify.app/",
     workplace: "Personal",
     image: "inventoryprototype.png",
@@ -91,9 +91,7 @@ export const portfolioData: PortfolioData[] = [
     tech: [
       "React",
       "SASS",
-      "Photoshop",
       "Illustrator",
-      "Adobe XD",
       "Design Exploration",
       "Color theory",
     ],
