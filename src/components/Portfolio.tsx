@@ -90,6 +90,7 @@ export const portfolioData: PortfolioData[] = [
       "Website was designed and built from the ground up, in React and the Adobe Creative Suite. ",
     tech: [
       "React",
+      "TypeScript",
       "SASS",
       "Illustrator",
       "Design Exploration",
@@ -106,7 +107,13 @@ export const portfolioData: PortfolioData[] = [
     name: "Grove Group Website",
     description:
       "Worked with Grove Group Electrical to produce their primary website for commerical services. With CMS for easy data entry by their team. <br/> <br/> Currently in the process of data entry by their team.",
-    tech: ["React", "SASS", "Design Exploration", "Serverless CMS"],
+    tech: [
+      "React",
+      "TypeScript",
+      "SASS",
+      "Design Exploration",
+      "Serverless CMS",
+    ],
     link: "https://edison-18de75.netlify.app/",
     workplace: "Independent Project",
     image: "grove-electrical.jpeg",
@@ -118,7 +125,7 @@ export const portfolioData: PortfolioData[] = [
     name: "Website Prototype",
     description:
       "Mock website demonstrating capabilities in React, for a generic engineering company. <br/> <br/> Professional design with a scalable layout for future work.",
-    tech: ["React", "SASS", "Design Exploration"],
+    tech: ["React", "TypeScript", "SASS", "Design Exploration"],
     link: "https://leonardo-d4633.web.app/",
     workplace: "Personal",
     image: "robot101engineering.jpeg",
@@ -129,7 +136,7 @@ export const portfolioData: PortfolioData[] = [
     name: "Dota Meme Team",
     description:
       "Fan website for video game Dota 2. Generates different team ideas to play with friends. <br/> <br/> Utilizes Dota 2's extensive online image hosting to generate pre-defined team compositions.",
-    tech: ["React", "SASS"],
+    tech: ["React", "TypeScript", "SASS"],
     link: "https://www.dotamemeteam.com/",
     workplace: "Personal",
     image: "dotamemeteam.jpeg",
