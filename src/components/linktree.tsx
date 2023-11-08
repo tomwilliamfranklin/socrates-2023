@@ -127,9 +127,7 @@ export default function LinkTree() {
         <div className="flex-1 max-w-[1000px] h-full flex flex-col">
           <h3 className=" font-light text-blackColor">
             Where <span className=" font-medium text-accent3">you</span> can{" "}
-            <span className=" font-medium text-accent2 font-medium">
-              find me...
-            </span>
+            find <span className=" font-medium text-accent2">me</span>...
           </h3>
         </div>
         <div className=" flex gap-10">
