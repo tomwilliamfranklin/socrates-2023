@@ -100,7 +100,7 @@ export default function LinkTree() {
                 intricate Frontend components.
                 <br /> <br />
                 My experience spans a wide array of applications, including
-                <span className=" font-bold">AAA video game UI</span>,{" "}
+                <span className=" font-bold"> AAA video game UI</span>,{" "}
                 <span className=" font-bold"> websites</span>,{" "}
                 <span className=" font-bold"> mobile apps</span>, and{" "}
                 <span className=" font-bold"> software applications</span>.
@@ -150,7 +150,7 @@ export default function LinkTree() {
                 </li>
                 <li>
                   <span className=" text-accent3"> • </span>
-                  UI Testing and Debugging
+                  Testing and Debugging
                 </li>
                 <li>
                   <span className=" text-accent5"> • </span>
