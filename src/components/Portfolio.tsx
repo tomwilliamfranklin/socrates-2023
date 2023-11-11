@@ -63,28 +63,6 @@ export const portfolioData: PortfolioData[] = [
     genre: Genre.Gaming,
   },
   {
-    name: "Inventory UI Tech Demo",
-    description:
-      "An experiment for creating a inventory system in Preact, with code emulating the supported features of Coherent Gameface. ",
-    tech: ["Preact", "TypeScript", "Photoshop", "Illustrator"],
-    link: "https://main--keen-basbousa-602f52.netlify.app/",
-    workplace: "Personal",
-    image: "inventoryprototype.png",
-    disableImageScroll: true,
-    didProgramming: true,
-    didDesign: true,
-    genre: Genre.Gaming,
-  },
-  // {
-  //   name: "Farmiloe Instruments",
-  //   description:
-  //     "Working with Farmiloe Instruments to produce their primary website for commerical services. With CRM for easy data entry. <br/> <br/> Currently in the process of data entry by their team.",
-  //   tech: ["React", "SASS", "UI Design", "DecapCRM"],
-  //   link: "https://heisz.netlify.app/",
-  //   workplace: "Independent Project",
-  //   image: "heisz.jpeg",
-  // },
-  {
     name: "Portfolio Website",
     description:
       "Website was designed and built from the ground up, in React and the Adobe Creative Suite. ",
@@ -102,6 +80,28 @@ export const portfolioData: PortfolioData[] = [
     genre: Genre.Website,
     didDesign: true,
     didProgramming: true,
+  },
+  // {
+  //   name: "Farmiloe Instruments",
+  //   description:
+  //     "Working with Farmiloe Instruments to produce their primary website for commerical services. With CRM for easy data entry. <br/> <br/> Currently in the process of data entry by their team.",
+  //   tech: ["React", "SASS", "UI Design", "DecapCRM"],
+  //   link: "https://heisz.netlify.app/",
+  //   workplace: "Independent Project",
+  //   image: "heisz.jpeg",
+  // },
+  {
+    name: "Inventory UI Tech Demo",
+    description:
+      "An experiment for creating a inventory system in Preact, with code emulating the supported features of Coherent Gameface. ",
+    tech: ["Preact", "TypeScript", "Photoshop", "Illustrator"],
+    link: "https://main--keen-basbousa-602f52.netlify.app/",
+    workplace: "Personal",
+    image: "inventoryprototype.png",
+    disableImageScroll: true,
+    didProgramming: true,
+    didDesign: true,
+    genre: Genre.Gaming,
   },
   {
     name: "Grove Group Website",
