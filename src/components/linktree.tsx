@@ -87,10 +87,10 @@ export default function LinkTree() {
               </div>
               <p className="flex-[2] text-left mt-5 text-greyColor md:min-w-[400px]">
                 I am a{" "}
-                <span className=" font-bold"> passionate UI/UX Developer</span>{" "}
-                with a robust background in design and development, with a keen
-                eye for creating intuitive, visually striking interfaces, driven
-                by a deep passion for the video game industry.
+                <span className=" font-bold"> passionate UI/UX Developer</span>
+                , with a keen eye for creating intuitive, visually striking
+                interfaces, driven by a deep passion for the video game
+                industry.
                 <br /> <br />
                 With a rich background in Frontend and UI/UX development, I
                 bring a versatile skillset that combines technical knowledge
@@ -113,24 +113,43 @@ export default function LinkTree() {
                   Component Development
                 </li>
                 <li>
+                  <span className=" text-accent3"> • </span>
+                  Development
+                </li>
+                <li>
                   <span className=" text-accent2"> • </span>
-                  UI / UX Development
+                  Prototyping
+                </li>
+                <li>
+                  <span className=" text-accent5"> • </span>
+                  Interative Design
+                </li>
+                <li>
+                  <span className=" text-accent4"> • </span>
+                  Integration
                 </li>
                 <li>
                   <span className=" text-accent3"> • </span>
-                  UI Prototyping
+                  User Testing
                 </li>
-
                 <li>
-                  <span className=" text-accent4"> • </span>
+                  <span className=" text-accent2"> • </span>
+                  Optimization
+                </li>
+                <li>
+                  <span className=" text-accent5"> • </span>
                   Mentor
                 </li>
                 <li>
-                  <span className=" text-accent3"> • </span>
-                  UI Designer
+                  <span className=" text-accent4"> • </span>
+                  Agile Development
                 </li>
                 <li>
                   <span className=" text-accent2"> • </span>
+                  User Testing
+                </li>
+                <li>
+                  <span className=" text-accent3"> • </span>
                   UI Testing and Debugging
                 </li>
               </ul>

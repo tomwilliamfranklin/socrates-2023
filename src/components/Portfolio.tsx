@@ -22,7 +22,7 @@ export type PortfolioData = {
 
 export const portfolioData: PortfolioData[] = [
   {
-    name: "Unannounced Title UI",
+    name: "Unannounced AAA Title",
     description: `I am currently working at Frontier, focusing on UI development for an undisclosed project. 
        <br/> 
        <br/> 

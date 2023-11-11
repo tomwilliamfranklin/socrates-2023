@@ -147,11 +147,11 @@ export default function Home() {
                         <span className="text-accent3">Creative</span>
                         <span className="text-accent2 font-normal">
                           {" "}
-                          front-end{" "}
+                          Developer &{" "}
                         </span>{" "}
                         <br className="md:hidden" />
                         <span className="text-accent2 font-normal">
-                          developer{" "}
+                          Designer
                         </span>
                         <br />
                         <span className="text-accent3">
