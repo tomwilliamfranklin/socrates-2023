@@ -75,7 +75,7 @@ export const portfolioData: PortfolioData[] = [
       "Colour theory",
       "Graphical Elements",
     ],
-    link: "https://www.tomfranklin.dev/pirateHUD.png",
+    link: "https://tomfranklin.dev/PirateGameUI_Screen1.png",
     workplace: "Personal",
     image: "PirateGameUI_Screen1.png",
     genre: Genre.Gaming,
