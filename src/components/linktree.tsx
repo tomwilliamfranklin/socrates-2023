@@ -79,7 +79,7 @@ export default function LinkTree() {
               <div className=" flex-[1] min-h-[300px] xxxs:min-w-[300px] flex flex-col justify-center items-center">
                 <img
                   className=" h-[250px] w-[250px]  md:h-[300px] md:w-[300px] bg-accent rounded-full overflow-hidden object-cover"
-                  alt=" a picture of me, tom franklin"
+                  alt=" a picture of me, Tom Franklin"
                   src={"/me.jpg"}
                   width={1000}
                   height={1000}
@@ -185,7 +185,7 @@ export default function LinkTree() {
         </div>
       </div>
 
-      <div className=" w-full h-full absolute repeating-svg">
+      <div className=" w-full h-full absolute repeating-svg pointer-events-none">
         <svg
           id="patternId"
           width="100%"
