@@ -77,7 +77,7 @@ export const portfolioData: PortfolioData[] = [
     ],
     link: "https://www.tomfranklin.dev/pirateHUD.png",
     workplace: "Personal",
-    image: "pirateHUD.png",
+    image: "PirateGameUI_Screen1.png",
     genre: Genre.Gaming,
     didDesign: true,
     didProgramming: false,
