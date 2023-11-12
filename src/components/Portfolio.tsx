@@ -27,7 +27,7 @@ export const portfolioData: PortfolioData[] = [
     description: `I am currently working at Frontier, focusing on UI development for an undisclosed project. 
        <br/> 
        <br/> 
-       In my role, I am part of establishing the UI codebase, constructing components, developing early features, prototyping UI design ideas.`,
+       In my role, I am part of establishing the UI codebase, constructing components, developing early features, prototyping UI design ideas, and integrating the UI.`,
     tech: [
       "TypeScript",
       "Illustrator",
@@ -46,7 +46,7 @@ export const portfolioData: PortfolioData[] = [
   {
     name: "F1 Manager UI",
     description:
-      "I was a part of the UI development since the very early stages, with responsiblity over multiple large-scale UI features, and the UI localization.",
+      "I was a part of the UI development since the very early stages, with responsiblity over multiple large-scale UI features, and the UI localization. Developing and integrating game UI, and iterating on ideas with cross-disciplines.",
     tech: [
       "Coherent Gameface",
       "TypeScript",
@@ -66,7 +66,7 @@ export const portfolioData: PortfolioData[] = [
   {
     name: "Pirate Game UI Design",
     description:
-      "[IN PROGRESS] A pirate game concept UI. The original idea came from Sid Meier's Pirates, and grew from there. ",
+      "[IN PROGRESS] A pirate game concept UI. The original idea came from Sid Meier's Pirates, and grew from there.",
     tech: [
       "Photoshop",
       "Illustrator",
