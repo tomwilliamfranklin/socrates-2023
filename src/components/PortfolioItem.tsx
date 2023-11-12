@@ -65,13 +65,19 @@ export default function PortfolioItem(props: Props) {
         )}
         {props.didDesign && (
           <div className=" bg-secondary text-whiteColor p-5 pt-2 pb-2 rounded-md border-l-8 border-l-accent2">
-            Design
+            UI/UX Design
           </div>
         )}
 
         {props.didSupportiveDesign && (
           <div className=" bg-secondary text-whiteColor p-5 pt-2 pb-2 rounded-md border-l-8 border-l-accent2">
-            Design (Supportive)
+            UI Design (Supportive)
+          </div>
+        )}
+
+        {props.didArt && (
+          <div className=" bg-secondary text-whiteColor p-5 pt-2 pb-2 rounded-md border-l-8">
+            UI Art
           </div>
         )}
       </div>

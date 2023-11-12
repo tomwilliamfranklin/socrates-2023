@@ -18,6 +18,7 @@ export type PortfolioData = {
   didDesign?: boolean;
   didSupportiveDesign?: boolean;
   didProgramming?: boolean;
+  didArt?: boolean;
 };
 
 export const portfolioData: PortfolioData[] = [
@@ -35,7 +36,7 @@ export const portfolioData: PortfolioData[] = [
       "Optimization",
     ],
     link: "https://www.frontier.co.uk/",
-    image: "mysterygame3.png",
+    image: "mysterygame4.png",
     workplace: "Frontier Developments",
     disableImageScroll: true,
     didProgramming: true,
@@ -63,6 +64,27 @@ export const portfolioData: PortfolioData[] = [
     genre: Genre.Gaming,
   },
   {
+    name: "Pirate Game UI Design",
+    description:
+      "[IN PROGRESS] A pirate game concept UI. The original idea came from Sid Meier's Pirates, and grew from there. ",
+    tech: [
+      "Photoshop",
+      "Illustrator",
+      "Adobe XD",
+      "Design Exploration",
+      "Colour theory",
+      "Graphical Elements",
+    ],
+    link: "https://www.tomfranklin.dev/pirateHUD.png",
+    workplace: "Personal",
+    image: "pirateHUD.png",
+    genre: Genre.Gaming,
+    didDesign: true,
+    didProgramming: false,
+    didArt: true,
+    disableImageScroll: true,
+  },
+  {
     name: "Portfolio Website",
     description:
       "Website was designed and built from the ground up, in React and the Adobe Creative Suite. ",
@@ -72,9 +94,9 @@ export const portfolioData: PortfolioData[] = [
       "SASS",
       "Illustrator",
       "Design Exploration",
-      "Color theory",
+      "Colour theory",
     ],
-    link: "www.tomfranklin.dev",
+    link: "https://www.tomfranklin.dev",
     workplace: "Personal",
     image: "portfoliosite.jpeg",
     genre: Genre.Website,
@@ -121,29 +143,29 @@ export const portfolioData: PortfolioData[] = [
     didProgramming: true,
     genre: Genre.Website,
   },
-  {
-    name: "Website Prototype",
-    description:
-      "Mock website demonstrating capabilities in React, for a generic engineering company. <br/> <br/> Professional design with a scalable layout for future work.",
-    tech: ["React", "TypeScript", "SASS", "Design Exploration"],
-    link: "https://leonardo-d4633.web.app/",
-    workplace: "Personal",
-    image: "robot101engineering.jpeg",
-    genre: Genre.Website,
-    didProgramming: true,
-  },
-  {
-    name: "Dota Meme Team",
-    description:
-      "Fan website for video game Dota 2. Generates different team ideas to play with friends. <br/> <br/> Utilizes Dota 2's extensive online image hosting to generate pre-defined team compositions.",
-    tech: ["React", "TypeScript", "SASS"],
-    link: "https://www.dotamemeteam.com/",
-    workplace: "Personal",
-    image: "dotamemeteam.jpeg",
-    disableImageScroll: true,
-    genre: Genre.Website,
-    didProgramming: true,
-  },
+  // {
+  //   name: "Website Prototype",
+  //   description:
+  //     "Mock website demonstrating capabilities in React, for a generic engineering company. <br/> <br/> Professional design with a scalable layout for future work.",
+  //   tech: ["React", "TypeScript", "SASS", "Design Exploration"],
+  //   link: "https://leonardo-d4633.web.app/",
+  //   workplace: "Personal",
+  //   image: "robot101engineering.jpeg",
+  //   genre: Genre.Website,
+  //   didProgramming: true,
+  // },
+  // {
+  //   name: "Dota Meme Team",
+  //   description:
+  //     "Fan website for video game Dota 2. Generates different team ideas to play with friends. <br/> <br/> Utilizes Dota 2's extensive online image hosting to generate pre-defined team compositions.",
+  //   tech: ["React", "TypeScript", "SASS"],
+  //   link: "https://www.dotamemeteam.com/",
+  //   workplace: "Personal",
+  //   image: "dotamemeteam.jpeg",
+  //   disableImageScroll: true,
+  //   genre: Genre.Website,
+  //   didProgramming: true,
+  // },
 ];
 
 export default function Portfolio() {
