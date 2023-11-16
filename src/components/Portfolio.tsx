@@ -112,19 +112,19 @@ export const portfolioData: PortfolioData[] = [
   //   workplace: "Independent Project",
   //   image: "heisz.jpeg",
   // },
-  {
-    name: "Inventory UI Tech Demo",
-    description:
-      "An experiment for creating a inventory system in Preact, with code emulating the supported features of Coherent Gameface. ",
-    tech: ["Preact", "TypeScript", "Photoshop", "Illustrator"],
-    link: "https://main--keen-basbousa-602f52.netlify.app/",
-    workplace: "Personal",
-    image: "inventoryprototype.png",
-    disableImageScroll: true,
-    didProgramming: true,
-    didDesign: true,
-    genre: Genre.Gaming,
-  },
+  // {
+  //   name: "Inventory UI Tech Demo",
+  //   description:
+  //     "An experiment for creating a inventory system in Preact, with code emulating the supported features of Coherent Gameface. ",
+  //   tech: ["Preact", "TypeScript", "Photoshop", "Illustrator"],
+  //   link: "https://main--keen-basbousa-602f52.netlify.app/",
+  //   workplace: "Personal",
+  //   image: "inventoryprototype.png",
+  //   disableImageScroll: true,
+  //   didProgramming: true,
+  //   didDesign: true,
+  //   genre: Genre.Gaming,
+  // },
   {
     name: "Grove Group Website",
     description:
