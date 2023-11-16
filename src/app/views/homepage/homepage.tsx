@@ -147,13 +147,14 @@ export default function Home() {
                         <span className="text-accent3">Creative</span>
                         <span className="text-accent2 font-normal">
                           {" "}
-                          Developer &{" "}
+                          Developer{/* &*/}{" "}
                         </span>{" "}
-                        <br className="md:hidden" />
+                        <br />
+                        {/*
                         <span className="text-accent2 font-normal">
                           Designer
                         </span>
-                        <br />
+                        <br /> */}
                         <span className="text-accent3">
                           <span className="text-accent3">for the</span>
                           <span className="font-normal"> UI/UX</span>{" "}

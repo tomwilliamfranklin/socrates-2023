@@ -92,12 +92,12 @@ export default function LinkTree() {
                 interfaces, driven by a deep passion for the video game
                 industry.
                 <br /> <br />
-                With a rich background in Frontend and UI/UX development, I
-                bring a versatile skillset that combines technical knowledge
-                with creative capabilities. I have a proven track record of
-                guiding applications from their initial stages, laying down the
-                essential groundwork for projects, and meticulously developing
-                intricate Frontend components.
+                With a rich background in UI/UX development, I bring a versatile
+                skillset that combines technical knowledge with creative flair.
+                I have a proven track record of guiding applications from their
+                initial stages, laying down the essential groundwork for
+                projects, and meticulously developing intricate Frontend
+                components.
                 <br /> <br />
                 My experience spans a wide array of applications, including
                 <span className=" font-bold"> AAA video game UI</span>,{" "}
@@ -154,7 +154,7 @@ export default function LinkTree() {
                 </li>
                 <li>
                   <span className=" text-accent5"> • </span>
-                  Animation
+                  Animation Implmentation
                 </li>
               </ul>
             </p>
