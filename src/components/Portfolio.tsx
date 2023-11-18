@@ -154,18 +154,18 @@ export const portfolioData: PortfolioData[] = [
   //   genre: Genre.Website,
   //   didProgramming: true,
   // },
-  // {
-  //   name: "Dota Meme Team",
-  //   description:
-  //     "Fan website for video game Dota 2. Generates different team ideas to play with friends. <br/> <br/> Utilizes Dota 2's extensive online image hosting to generate pre-defined team compositions.",
-  //   tech: ["React", "TypeScript", "SASS"],
-  //   link: "https://www.dotamemeteam.com/",
-  //   workplace: "Personal",
-  //   image: "dotamemeteam.jpeg",
-  //   disableImageScroll: true,
-  //   genre: Genre.Website,
-  //   didProgramming: true,
-  // },
+  {
+    name: "Dota Meme Team",
+    description:
+      "Fan website for video game Dota 2. Generates different team ideas to play with friends. <br/> <br/> Utilizes Dota 2's extensive online image hosting to generate pre-defined team compositions.",
+    tech: ["React", "TypeScript", "SASS"],
+    link: "https://www.dotamemeteam.com/",
+    workplace: "Personal",
+    image: "dotamemeteam.jpeg",
+    disableImageScroll: true,
+    genre: Genre.Website,
+    didProgramming: true,
+  },
 ];
 
 export default function Portfolio() {
