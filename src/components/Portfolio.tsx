@@ -127,24 +127,24 @@ export const portfolioData: PortfolioData[] = [
     didDesign: true,
     genre: Genre.Gaming,
   },
-  {
-    name: "Grove Group Website",
-    description:
-      "Worked with Grove Group Electrical to produce their primary website for commerical services. With CMS for easy data entry by their team. <br/> <br/> Currently in the process of data entry by their team.",
-    tech: [
-      "React",
-      "TypeScript",
-      "SASS",
-      "Design Exploration",
-      "Serverless CMS",
-    ],
-    link: "https://edison-18de75.netlify.app/",
-    workplace: "Independent Project",
-    image: "grove-electrical.jpeg",
-    didDesign: true,
-    didProgramming: true,
-    genre: Genre.Website,
-  },
+  // {
+  //   name: "Grove Group Website",
+  //   description:
+  //     "Worked with Grove Group Electrical to produce their primary website for commerical services. With CMS for easy data entry by their team. <br/> <br/> Currently in the process of data entry by their team.",
+  //   tech: [
+  //     "React",
+  //     "TypeScript",
+  //     "SASS",
+  //     "Design Exploration",
+  //     "Serverless CMS",
+  //   ],
+  //   link: "https://edison-18de75.netlify.app/",
+  //   workplace: "Independent Project",
+  //   image: "grove-electrical.jpeg",
+  //   didDesign: true,
+  //   didProgramming: true,
+  //   genre: Genre.Website,
+  // },
   // {
   //   name: "Website Prototype",
   //   description:
