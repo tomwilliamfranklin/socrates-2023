@@ -23,11 +23,24 @@ export type PortfolioData = {
 
 export const portfolioData: PortfolioData[] = [
   {
+    name: "Wardogs",
+    description: `I am currently working at Bulkhead, on the Wardogs title in a full-stack UI development capacity.`,
+    tech: ["Figma", "Illustrator", "Photoshop", "Prototyping"],
+    link: "https://www.bulkhead.com/",
+    image: "wardogs.png",
+    workplace: "Bulkhead",
+    disableImageScroll: true,
+    didProgramming: true,
+    didDesign: true,
+    didArt: true,
+    genre: Genre.Gaming,
+  },
+  {
     name: "Unannounced AAA Title",
-    description: `I am currently working at Frontier, focusing on UI development for an undisclosed project. 
+    description: `Previously worked at Frontier on a unannounced title, primarily in a UI development role. 
        <br/> 
        <br/> 
-       In my role, I am part of establishing the UI codebase, constructing components, developing early features, prototyping UI design ideas, and integrating the UI.`,
+       Part of establishing the UI codebase, constructing components, developing early features, prototyping UI design ideas, and integrating the UI.`,
     tech: [
       "TypeScript",
       "LUA",
