@@ -36,12 +36,14 @@ export const portfolioData: PortfolioData[] = [
     genre: Genre.Gaming,
   },
   {
-    name: "Unannounced AAA Title",
-    description: `Previously worked at Frontier on a unannounced title, primarily in a UI development role. 
+    name: "Planet Coaster 2",
+    description: `Previously worked at Frontier on Planet Coaster 2, in a UI development role. 
        <br/> 
        <br/> 
-       Part of establishing the UI codebase, constructing components, developing early features, prototyping UI design ideas, and integrating the UI.`,
+       Established the UI codebase, building components used throughout the different areas of the game. 
+       developed early pre production and production features, prototyping UI design ideas, and reconstructing the codebase from the previous installments.`,
     tech: [
+      "C++",
       "TypeScript",
       "LUA",
       "Illustrator",
@@ -49,8 +51,8 @@ export const portfolioData: PortfolioData[] = [
       "Prototyping",
       "Optimization",
     ],
-    link: "https://www.frontier.co.uk/",
-    image: "mysterygame4.png",
+    link: "https://www.planetcoaster.com/",
+    image: "planet-coaster2.png",
     workplace: "Frontier Developments",
     disableImageScroll: true,
     didProgramming: true,
@@ -59,8 +61,8 @@ export const portfolioData: PortfolioData[] = [
   },
   {
     name: "F1 Manager UI",
-    description:
-      "I was a part of the UI development since the very early stages, with responsiblity over multiple large-scale UI features, and the UI localization. Developing and integrating game UI, and iterating on ideas with cross-disciplines.",
+    description: `I was a part of the UI development since the very early stages, with responsiblity over multiple large-scale UI features, and the UI localization.
+     Developing and integrating game UI, and iterating on ideas with cross-disciplines.`,
     tech: [
       "Coherent Gameface",
       "TypeScript",
