@@ -25,7 +25,16 @@ export const portfolioData: PortfolioData[] = [
   {
     name: "Wardogs",
     description: `I am currently working at Bulkhead, on the Wardogs title in a full-stack UI development capacity.`,
-    tech: ["C++", "Figma", "Illustrator", "Photoshop", "Prototyping"],
+    tech: [
+      "C++",
+      "C#",
+      "Unreal Engine 5",
+      "Unity",
+      "Figma",
+      "Illustrator",
+      "Photoshop",
+      "Prototyping",
+    ],
     link: "https://www.bulkhead.com/",
     image: "wardogs.png",
     workplace: "Bulkhead",
