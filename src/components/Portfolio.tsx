@@ -24,7 +24,7 @@ export type PortfolioData = {
 export const portfolioData: PortfolioData[] = [
   {
     name: "Wardogs",
-    description: `Worked on wardogs as a UI programmer, helping prototype and design early feature ideas. Developing UI for a FPS experience, including replication to a vast number of clients in Unreal Engine 5 / UMG. As well as prototype projects in Unity.`,
+    description: `Worked on Wardogs as a UI programmer, helping prototype and design early feature ideas. Developing UI for a FPS experience, including replication to a vast number of clients in Unreal Engine 5 / UMG. As well as prototype projects and designs in Figma & Unity.`,
     tech: [
       "C++",
       "C#",
