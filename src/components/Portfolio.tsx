@@ -23,28 +23,6 @@ export type PortfolioData = {
 
 export const portfolioData: PortfolioData[] = [
   {
-    name: "Wardogs",
-    description: `I am currently working at Bulkhead, on the Wardogs title in a full-stack UI development capacity.`,
-    tech: [
-      "C++",
-      "C#",
-      "Unreal Engine 5",
-      "Unity",
-      "Figma",
-      "Illustrator",
-      "Photoshop",
-      "Prototyping",
-    ],
-    link: "https://www.bulkhead.com/",
-    image: "wardogs.png",
-    workplace: "Bulkhead",
-    disableImageScroll: true,
-    didProgramming: true,
-    didDesign: true,
-    didArt: true,
-    genre: Genre.Gaming,
-  },
-  {
     name: "Planet Coaster 2",
     description: `Previously worked at Frontier on Planet Coaster 2, in a UI development role. 
        <br/> 
@@ -90,9 +68,30 @@ export const portfolioData: PortfolioData[] = [
     genre: Genre.Gaming,
   },
   {
+    name: "Wardogs",
+    description: `In-Development 'All-Out Warfare' FPS. <br/> <br/> "WARDOGS rewrites the rules of All-Out Warfare. Three teams conflict over land, sea and air to seize and secure a dynamic 100-player battlefield - where every tactical decision, teamplay action and risk gets rewarded." - Bulkhead Website`,
+    tech: [
+      "C++",
+      "C#",
+      "Unreal Engine 5",
+      "Unity",
+      "Figma",
+      "Illustrator",
+      "Photoshop",
+      "Prototyping",
+    ],
+    link: "https://www.bulkhead.com/",
+    image: "wardogs.png",
+    workplace: "Bulkhead",
+    disableImageScroll: true,
+    didProgramming: true,
+    didDesign: true,
+    didArt: true,
+    genre: Genre.Gaming,
+  },
+  {
     name: "Pirate Game UI Design",
-    description:
-      "[IN PROGRESS] A pirate game concept UI. The original idea came from Sid Meier's Pirates, and grew from there.",
+    description: "A pirate game concept UI built in Adobe XD.",
     tech: [
       "Photoshop",
       "Illustrator",
