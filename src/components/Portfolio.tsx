@@ -23,6 +23,19 @@ export type PortfolioData = {
 
 export const portfolioData: PortfolioData[] = [
   {
+    name: "KRAFTON Project",
+    description: `Mystery project yet to be announced. <br/> <br/>
+       Currently working on a project for KRAFTON, in a UI development role. I am the only UI Developer, leading the UI development and system for the project.`,
+    tech: ["C++", "UMG", "Unreal Engine 5", "Figma", "Illustrator"],
+    link: "https://www.linkedin.com/company/vector-north/posts/?feedView=all",
+    image: "kraftonvectornorth.png",
+    workplace: "KRAFTON inc. (Vector North)",
+    disableImageScroll: true,
+    didProgramming: true,
+    didSupportiveDesign: true,
+    genre: Genre.Gaming,
+  },
+  {
     name: "Planet Coaster 2",
     description: `Previously worked at Frontier on Planet Coaster 2, in a UI development role. 
        <br/> 
